@@ -1,0 +1,35 @@
+<section class="contact-info padding-section">
+        <div class="container">
+          <div class="contact-info-top">
+            <div class="row">
+              <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+                <div class="contact-info-top-inner">
+                  <div class="contact-info-top-box">
+                    <h3 class="contact-info-title">Our Address</h3>
+                    <p class="contact-info-des">PO Box 16122 Collins <br>Street West Victoria 8007, Australia.</p>
+                    <span class="contact-info-icon ti-home"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+                <div class="contact-info-top-inner">
+                  <div class="contact-info-top-box">
+                    <h3 class="contact-info-title">Email Address</h3>
+                    <p class="contact-info-des">Contact@hamadryad.com</p>
+                    <span class="contact-info-icon ti-email"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+                <div class="contact-info-top-inner">
+                  <div class="contact-info-top-box">
+                    <h3 class="contact-info-title">Phone Number</h3>
+                    <p class="contact-info-des">(+68) 123 456 7890</p>
+                    <span class="contact-info-icon ti-mobile"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>

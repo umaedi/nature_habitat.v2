@@ -1,0 +1,36 @@
+div.wrapper {
+	height: auto;
+	margin: auto;
+	margin-top: 70px;
+	position: relative;
+	width: 350px;
+	overflow: hidden;
+}
+
+.btn {
+	background-color: #748a53 !important;
+	color: #fff;
+}
+
+div.wrapper h2.brand-name {
+	color: #333333;
+	font-size: 28px;
+	font-family: "Nunito";
+	font-weight: 700;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+div.wrapper p.subtitle {
+	color: #666666;
+	font-family: "Open Sans";
+	font-size: 15px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+	div.wrapper {
+		width: 90%;
+	}
+}

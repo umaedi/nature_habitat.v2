@@ -297,6 +297,7 @@ class Products_model extends CI_Model
 
         $stock = $this->input->post('stock');
         $category = $this->input->post('category');
+        $category_2 = $this->input->post('category_2');
         $condit = $this->input->post('condit');
         $weight = $this->input->post('weight');
         $img = $upload['file']['file_name'];
@@ -323,7 +324,8 @@ class Products_model extends CI_Model
             "size1" => $size1,
             "size2" => $size2,
             "stock" => $stock,
-            "category" => $category,
+            "category" => $category_2,
+            "category_2" => $category,
             "condit" => $condit,
             "weight" => $weight,
             "img" => $img,

@@ -50,7 +50,7 @@
             </div>
             <div class="list">
                 <p>Total Item Price</p>
-                <p>Rp <?= number_format($totalall, 0, ",", "."); ?></p>
+                <p>$<?= number_format($totalall, 0, ",", "."); ?></p>
             </div>
             <?php if ($cart->num_rows() > 0) { ?>
                 <a href="<?= base_url(); ?>payment">

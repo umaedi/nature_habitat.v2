@@ -6,6 +6,12 @@ class Categories_model extends CI_Model
 
     public function getCategories()
     {
+        $this->db->where(['role' => 1]);
+        return $this->db->get('categories');
+    }
+    public function getCategories2()
+    {
+        $this->db->where(['role' => 2]);
         return $this->db->get('categories');
     }
 

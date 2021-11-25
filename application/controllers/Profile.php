@@ -34,8 +34,8 @@ class Profile extends CI_Controller
     {
         $data['title'] = 'Profil - ' . $this->Settings_model->general()["app_name"];
         $data['css'] = 'profile';
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/navbar');
+        $this->load->view('templates/header_nature', $data);
+        $this->load->view('templates/navbar_nature');
         $this->load->view('profile/index');
         $this->load->view('templates/footerv2');
     }

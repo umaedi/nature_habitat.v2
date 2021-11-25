@@ -45,8 +45,6 @@ $setting = $this->db->get('settings')->row_array();
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
   <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,13 +55,16 @@ $setting = $this->db->get('settings')->row_array();
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="<?= base_url(); ?>assets/nature/css/bootstrap.min.css" type="text/css">
-  <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/nature/css/style.css">
 
   <!-- Cutom css -->
+  <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/nature/css/style.css">
   <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/css/app.css">
   <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/css/app-responsive.css">
+  <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/css/<?= $css;  ?>.css">
 
   <link rel="shortcut icon" href="<?= base_url();  ?>assets/images/logo/<?= $setting['favicon']; ?>" type="image/x-icon" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/2baad1d54e.js" crossorigin="anonymous"></script>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/2baad1d54e.js" crossorigin="anonymous"></script>
@@ -82,7 +83,12 @@ $setting = $this->db->get('settings')->row_array();
 </head>
 
 <body>
+  <!-- <div class="fakeLoader">
+    <div class="spinner4">
 
+    </div>
+
+  </div> -->
   <?php
   $setting = $this->db->get('settings')->row_array();
   $dateNow = date('Y-m-d H:i');

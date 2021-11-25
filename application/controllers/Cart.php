@@ -37,8 +37,8 @@ class Cart extends CI_Controller
         $data['css'] = 'cart';
         $data['responsive'] = '';
         $data['cart'] = $this->Order_model->getCartUser();
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/navbar');
+        $this->load->view('templates/header_nature', $data);
+        $this->load->view('templates/navbar_nature');
         $this->load->view('page/cart', $data);
         $this->load->view('templates/footerv2');
     }

@@ -411,7 +411,7 @@ class Administrator extends CI_Controller
             }
             $this->session->set_flashdata('upload', "<script>
                 swal({
-                text: 'Email berhasil dikirim',
+                text: 'Email sent successfully',
                 icon: 'success'
                 });
             </script>");
@@ -425,7 +425,7 @@ class Administrator extends CI_Controller
         $this->db->delete('email_send');
         $this->session->set_flashdata('upload', "<script>
             swal({
-            text: 'Email berhasil dihapus',
+            text: 'Email sent successfully',
             icon: 'success'
             });
         </script>");
@@ -594,6 +594,7 @@ class Administrator extends CI_Controller
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Tambah Produk - Admin Panel';
             $data['categories'] = $this->Categories_model->getCategories();
+            $data['categories2'] = $this->Categories_model->getCategories2();
             $this->load->view('templates/header_admin', $data);
             $this->load->view('administrator/add_product', $data);
             $this->load->view('templates/footer_admin');

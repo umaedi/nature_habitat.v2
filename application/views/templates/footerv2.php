@@ -99,6 +99,14 @@ if ($this->session->userdata('login')) {
 <script src="<?= base_url(); ?>assets/js/jquery.countdown.min.js"></script>
 <script src="<?= base_url(); ?>assets/lightbox2-2.11.1/dist/js/lightbox.js"></script>
 <script src="<?= base_url(); ?>assets/select2-4.0.6-rc.1/dist/js/select2.min.js"></script>
+
+<!-- custom js -->
+<script src="<?= base_url(); ?>assets/nature/js/jquery-1.12.4.min.js"></script>
+<script src="<?= base_url(); ?>assets/nature/vendors/owlcarousel/owl.carouselv2.2.min.js"></script>
+<script src="<?= base_url(); ?>assets/nature/vendors/slick/slick.min.js"></script>
+<script src="<?= base_url(); ?>assets/nature/js/bootstrap.bundle.min.js"></script>
+<script src="<?= base_url(); ?>assets/nature/vendors/rangeslider/js/ion.rangeSlider.min.js"></script>
+<script src="<?= base_url(); ?>assets/nature/js/custom.js"></script>
 <script>
     $('.recent-product').slick({
         infinite: false,

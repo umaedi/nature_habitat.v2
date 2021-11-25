@@ -9,6 +9,7 @@ class Products extends CI_Controller
 		parent::__construct();
 		$this->load->model('Categories_model');
 		$this->load->model('Products_model');
+		$this->load->model('order_model');
 	}
 
 	public function index()
@@ -67,8 +68,9 @@ class Products extends CI_Controller
 		$data['title'] = 'Semua Produk - ' . $this->Settings_model->general()["app_name"];
 		$data['css'] = 'products';
 		$data['responsive'] = 'product-responsive';
-		$this->load->view('templates/header', $data);
-		$this->load->view('templates/navbar');
+		$data['cart'] = $this->order_model->getCartUser();
+		$this->load->view('templates/header_nature', $data);
+		$this->load->view('templates/navbar_nature');
 		$this->load->view('page/products', $data);
 		$this->load->view('templates/footerv2');
 	}
@@ -85,8 +87,9 @@ class Products extends CI_Controller
 			$data['responsive'] = '';
 			$data['product'] = $getProduct;
 			$data['img'] = $this->Products_model->getImgProductBySlug($slug);
-			$this->load->view('templates/header', $data);
-			$this->load->view('templates/navbar');
+			$data['cart'] = $this->order_model->getCartUser();
+			$this->load->view('templates/header_nature', $data);
+			$this->load->view('templates/navbar_nature');
 			$this->load->view('page/detail', $data);
 			$this->load->view('templates/footerv2');
 		}

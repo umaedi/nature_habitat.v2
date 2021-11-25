@@ -1,9 +1,11 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Promo extends CI_Controller {
+class Promo extends CI_Controller
+{
 
-	public function __construct(){
+	public function __construct()
+	{
 		parent::__construct();
 		$this->load->model('Categories_model');
 		$this->load->model('Products_model');
@@ -11,15 +13,15 @@ class Promo extends CI_Controller {
 		$this->load->model('Promo_model');
 	}
 
-	public function index(){
+	public function index()
+	{
 		$data['title'] = 'Promo - ' . $this->Settings_model->general()["app_name"];
 		$data['css'] = 'promo';
 		$data['promo'] = $this->Promo_model->getPromo();
 		$data['setting'] = $this->Settings_model->getSetting();
-		$this->load->view('templates/header', $data);
-		$this->load->view('templates/navbar');
+		$this->load->view('templates/header_nature', $data);
+		$this->load->view('templates/navbar_nature');
 		$this->load->view('page/promo', $data);
 		$this->load->view('templates/footerv2');
 	}
-
 }

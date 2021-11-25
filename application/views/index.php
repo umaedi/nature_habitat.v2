@@ -44,8 +44,8 @@
                       <h1 id="TitleProduct" class="product-detail-v1-title mb-0">Product Name</h1>
                       <div class="product-detail-v1-meta">
                         <div class="product-detail-v1-price">
-                          <div class="cost">$80.00</div>
-                          <div class="sale">$60.00</div>
+                          <!-- <div class="cost">$80.00</div>
+                          <div class="sale">$60.00</div> -->
                         </div>
                       </div>
                       <p class="mb-0" id="productDesc">
@@ -57,9 +57,15 @@
                           <input type="text" class="quanlity-num" pattern="[0-9]*" value="1">
                           <button type="button" class="addition">+</button>
                         </div>
-                        <div class="add-product">
-                          <button type="submit" class="btn-addproduct">Add to cart</button>
-                        </div>
+                        <?php if ($this->session->userdata('login')) { ?>
+                          <div class="add-product">
+                            <button class="btn-addproduct" onclick="addCart()">Add to cart</button>
+                          </div>
+                        <?php } else { ?>
+                          <div class="add-product">
+                            <button class="btn-addproduct addProduct" onclick="addCart()">Add to cart</button>
+                          </div>
+                        <?php } ?>
                       </div>
                       <div class="product-detail-v1-attr">
                         <p class="mb-0"><span>Categories:</span> Out Door Plant, Plant On Table, Potted.</p>
@@ -146,9 +152,15 @@
                           <li class="item-action review">
                             <a href="javascript:void(0);" class="action-link review-product" data-title="<?= $p['title']; ?>" data-desc="<?= $p['description']; ?>" data-img="<?= $p['img']; ?>"><i class="icon ti-eye"></i></a>
                           </li>
-                          <li class="item-action add-to-card">
-                            <a class="action-link" href="#"><i class="icon icon-ecommerce-basket"></i></a>
-                          </li>
+                          <?php if ($this->session->userdata('login')) { ?>
+                            <li class="item-action">
+                              <a href="javascript:void(0);" class="action-link addCart"><i class="icon icon-ecommerce-basket" data-id="<?= $p['productId']; ?>"></i></a>
+                            </li>
+                          <?php } else { ?>
+                            <li class="item-action add-to-card">
+                              <a class="action-link" href="javascript:void(0);" id="addCart"><i class="icon icon-ecommerce-basket"></i></a>
+                            </li>
+                          <?php } ?>
                         </ul>
                       </div>
                     </div>
@@ -227,8 +239,16 @@
                           <a class="action-link" href="javascript:void(0);"><i class="icon ti-eye"></i></a>
                         </li>
                         <li class="item-action add-to-card">
-                          <button class="action-link" onclick="addCartx()"><i class="icon icon-ecommerce-basket"></i></button>
+                          <?php if ($this->session->userdata('login')) { ?>
+                        <li class="item-action addCartx">
+                          <a href="javascript:void(0);" class="action-link"><i class="icon icon-ecommerce-basket" data-id="<?= $p['id']; ?>"></i></a>
                         </li>
+                      <?php } else { ?>
+                        <li class="item-action add-to-card">
+                          <a class="action-link" href="javascript:void(0);" id="addCart"><i class="icon icon-ecommerce-basket"></i></a>
+                        </li>
+                      <?php } ?>
+                      </li>
                       </ul>
                     </div>
                   </div>
@@ -293,8 +313,16 @@
                           <a class="action-link" href="<?= base_url(); ?>p/<?= $p['slug']; ?>"><i class="icon ti-eye"></i></a>
                         </li>
                         <li class="item-action add-to-card">
-                          <a class="action-link" href="javascript:void(0);"><i class="icon icon-ecommerce-basket"></i></a>
+                          <?php if ($this->session->userdata('login')) { ?>
+                        <li class="item-action">
+                          <a href="javascript:void(0);" class="action-link addCart"><i class="icon icon-ecommerce-basket" data-id="<?= $p['productId']; ?>"></i></a>
                         </li>
+                      <?php } else { ?>
+                        <li class="item-action add-to-card">
+                          <a class="action-link" href="javascript:void(0);" id="addCart"><i class="icon icon-ecommerce-basket"></i></a>
+                        </li>
+                      <?php } ?>
+                      </li>
                       </ul>
                     </div>
                   </div>
@@ -357,8 +385,16 @@
                           <a class="action-link" href="<?= base_url(); ?>p/<?= $p['slug']; ?>"><i class="icon ti-eye"></i></a>
                         </li>
                         <li class="item-action add-to-card">
+                          <?php if ($this->session->userdata('login')) { ?>
+                        <li class="item-action">
+                          <a href="javascript:void(0);" class="action-link" id="addCart"><i class="icon icon-ecommerce-basket"></i></a>
+                        </li>
+                      <?php } else { ?>
+                        <li class="item-action add-to-card">
                           <a class="action-link" href="javascript:void(0);"><i class="icon icon-ecommerce-basket"></i></a>
                         </li>
+                      <?php } ?>
+                      </li>
                       </ul>
                     </div>
                   </div>
@@ -379,6 +415,7 @@
                     <a href="<?= base_url(); ?>login?redirect=products"><button class="more">View more our product</button></a>
                   <?php } ?>
                 <?php } ?>
+                <hr class="border-more">
               </div>
             </div>
           </div>
@@ -506,3 +543,12 @@
     </div>
   </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script>
+  $(function() {
+    $('#addCart').on('click', function() {
+      console.log('ok');
+    });
+  });
+</script>

@@ -90,7 +90,11 @@
                         <!--
                         --><input disabled type="text" value="1" id="qtyProduct" class="valueJml">
                         <!--
-                        --><button onclick="plusProduct(<?= $priceP; ?>, <?= $product['stock']; ?>)">+</button>
+                        --><?php if ($cart->num_rows() >= 10) { ?>
+                            <button class="addCartMax">+</button>
+                        <?php } else { ?>
+                            <button onclick="plusProduct(<?= $priceP; ?>, <?= $product['stock']; ?>)">+</button>
+                        <?php } ?>
                     </td>
                 </tr>
                 <tr>
@@ -101,7 +105,11 @@
                 <hr>
                 <?php if ($this->session->userdata('login')) { ?>
                     <button class="btn btn-beli pl-5 pr-5" onclick="buy()">Buy</button>
-                    <button class="btn btn-keranjang" onclick="addCart()">Add to cart</button>
+                    <?php if ($cart->num_rows() >= 10) { ?>
+                        <button class="btn btn-keranjang addCartMax">Add to cart</button>
+                    <?php } else { ?>
+                        <button class="btn btn-keranjang" onclick="addCart()">Add to cart</button>
+                    <?php } ?>
                 <?php } else { ?>
                     <a href="<?= base_url(); ?>login" class="btn btn-login">Buy</a>
                 <?php } ?>
@@ -136,9 +144,16 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script>
     function plusProduct(price, stock) {
-        let inputJml;
+        let inputJml = 10;
         inputJml = parseInt($("input.valueJml").val());
         inputJml = inputJml + 1;
+        if (inputJml > 10) {
+            swal({
+                text: "Sorry, you can't add more than 10 products to cart",
+                icon: 'warning'
+            });
+            inputJml = inputJml - 1;
+        }
         if (inputJml <= stock) {
             $.ajax({
                 url: `<?= base_url(); ?>products/getgrosir?product=<?= $product['productId']; ?>&stock=${inputJml}`,
@@ -257,6 +272,14 @@
             }
         })
     }
+
+    //MaxAddToCart
+    $('.addCartMax').on('click', function() {
+        swal({
+            text: "Sorry, you can't add more than 10 products to cart",
+            icon: 'warning'
+        });
+    })
 
     // slider product
     const containerImgProduct = document.querySelector("div.wrapper div.top div.main-top div.img");

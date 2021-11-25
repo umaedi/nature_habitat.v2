@@ -6,11 +6,6 @@
     //loading screen
     $(window).ready(function() {
         $(".fakeLoader").fadeOut("slow");
-        $('#modalRegisterSuccess').modal('show');
-
-        $("i.fa-bars").on('click', function() {
-            $("div.dropdown-mobile-menu").slideToggle('fast');
-        })
     })
 </script>
 </body>

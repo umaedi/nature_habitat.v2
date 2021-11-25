@@ -26,7 +26,7 @@ $order_finish = $this->db->get_where('invoice', ['user' => $this->session->userd
             <div class="col-md-12">
                 <div class="card shadow-sm">
                     <div class="card-body">
-                        If you have any questions please contact whatsapp <?= $this->Settings_model->general()["whatsapp"]; ?> or <a href="https://wa.me/<?= $this->Settings_model->general()["whatsappv2"]; ?>" target="_blank">klik disini</a>
+                        If you have any questions please contact whatsapp <?= $this->Settings_model->general()["whatsapp"]; ?> or <a href="https://wa.me/<?= $this->Settings_model->general()["whatsappv2"]; ?>" target="_blank">Click here</a>
                     </div>
                 </div>
             </div>

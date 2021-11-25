@@ -115,6 +115,7 @@ $rekening = $this->db->get('rekening');
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 <!-- custom js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="<?= base_url(); ?>assets/nature/js/jquery-1.12.4.min.js"></script>
 <script src="<?= base_url(); ?>assets/nature/vendors/owlcarousel/owl.carouselv2.2.min.js"></script>
 <script src="<?= base_url(); ?>assets/nature/vendors/slick/slick.min.js"></script>
@@ -167,6 +168,20 @@ $rekening = $this->db->get('rekening');
                 );
         },
     });
+
+    $(".add-to-card").on('click', function() {
+        swal({
+            text: 'You must login',
+            icon: 'warning'
+        });
+    })
+
+    $(".addProduct").on('click', function() {
+        swal({
+            text: 'You must login',
+            icon: 'warning'
+        });
+    })
 
     //loading screen
     $(window).ready(function() {

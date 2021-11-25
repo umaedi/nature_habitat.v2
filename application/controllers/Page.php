@@ -9,6 +9,7 @@ class Page extends CI_Controller
 		parent::__construct();
 		$this->load->model('Categories_model');
 		$this->load->model('Products_model');
+		$this->load->model('order_model');
 	}
 
 	public function index($slug)
@@ -20,8 +21,9 @@ class Page extends CI_Controller
 			$data['title'] = $page['title'] . ' - ' . $this->Settings_model->general()["app_name"];
 			$data['css'] = 'page';
 			$data['page'] = $page;
-			$this->load->view('templates/header', $data);
-			$this->load->view('templates/navbar');
+			$data['cart'] = $this->order_model->getCartUser();
+			$this->load->view('templates/header_nature', $data);
+			$this->load->view('templates/navbar_nature');
 			$this->load->view('page/page', $page);
 			$this->load->view('templates/footer_notmpl');
 		}
@@ -85,8 +87,9 @@ class Page extends CI_Controller
 		$data['css'] = 'products';
 		$data['responsive'] = 'product-responsive';
 		$data['q'] = $q;
-		$this->load->view('templates/header', $data);
-		$this->load->view('templates/navbar');
+		$data['cart'] = $this->order_model->getCartUser();
+		$this->load->view('templates/header_nature', $data);
+		$this->load->view('templates/navbar_nature');
 		$this->load->view('page/search', $data);
 		$this->load->view('templates/footerv2');
 	}

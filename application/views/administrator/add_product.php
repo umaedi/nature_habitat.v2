@@ -93,7 +93,30 @@
 					</div>
 				</div>
 				<div class="form-row">
-					categories
+					<div class="col-md-2">
+						<div class="form-group">
+							<label for="title">Ukuran 1</label>
+							<input type="text" class="form-control" id="title" name="size" autocomplete="off" />
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="form-group">
+							<label for="title">Ukuran 2</label>
+							<input type="text" class="form-control" id="title" name="size1" autocomplete="off" />
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="form-group">
+							<label for="title">Ukuran 3</label>
+							<input type="text" class="form-control" id="title" name="size2" autocomplete="off" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-12">
+							<label for="weight">Berat Produk</label>
+							<input type="number" class="form-control" id="weight" name="weight" placeholder="Dalam satuan" autocomplete="off" required value="<?= $product['weight']; ?>" />
+						</div>
+					</div>
 				</div>
 				<div class="form-group">
 					<label for="sendemail">Apakah kamu ingin mengirimkan notifikasi kepada pelanggan melalui email bahwa kamu telah menambah produk baru?</label>

@@ -279,17 +279,17 @@ class Products_model extends CI_Model
         $price = $this->input->post('price');
 
         if ($size = !$this->input->post('size')) {
-            $size = 'random';
+            $size = '';
         } else {
             $size = $this->input->post('size');
         }
         if ($size1 = !$this->input->post('size1')) {
-            $size1 = 'random';
+            $size1 = '';
         } else {
             $size1 = $this->input->post('size1');
         }
         if ($size2 = !$this->input->post('size2')) {
-            $size2 = 'random';
+            $size2 = '';
         } else {
 
             $size2 = $this->input->post('size2');

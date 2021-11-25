@@ -27,8 +27,8 @@ $config['midtrans_production'] = false;
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/nature_habitat.v1/';
-// $config['base_url'] = 'https://nature-habitat.com/';
+// $config['base_url'] = 'http://localhost/nature_habitat.v1/';
+$config['base_url'] = 'https://nature-habitat.com/';
 
 /*
 |--------------------------------------------------------------------------

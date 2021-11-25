@@ -780,6 +780,7 @@ class Administrator extends CI_Controller
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Edit Produk - Admin Panel';
             $data['categories'] = $this->Categories_model->getCategories();
+            $data['categories2'] = $this->Categories_model->getCategories2();
             $data['product'] = $this->Products_model->getProductById($id);
             $this->load->view('templates/header_admin', $data);
             $this->load->view('administrator/edit_product', $data);

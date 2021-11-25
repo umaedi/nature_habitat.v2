@@ -64,10 +64,16 @@
 					</div>
 					<div class="col-md-6">
 						<div class="form-group">
-							<label for="weight">Berat</label>
-							<input type="number" class="form-control" id="weight" name="weight" placeholder="Berat Produk (dalam satuan gram)" autocomplete="off" required value="<?= $product['weight']; ?>" />
+							<label for="cat">Subkategori</label>
+							<select class="form-control" id="cat" name="category_2">]
+								<option value="<?= $product['category'] ?>"><?= $product['name'] ?></option>
+								<?php foreach ($categories2->result_array() as $c) : ?>
+									<option value="<?= $c['id'] ?>"><?= $c['name'] ?></option>
+								<?php endforeach; ?>
+							</select>
 						</div>
 					</div>
+
 				</div>
 				<div class="form-row">
 					<div class="col-md-6">
@@ -111,6 +117,12 @@
 						<div class="form-group">
 							<label for="title">Ukuran 3</label>
 							<input type="text" class="form-control" id="title" name="size2" autocomplete="off" value="<?= $product['size2']; ?>" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-12">
+							<label for="weight">Berat</label>
+							<input type="number" class="form-control" id="weight" name="weight" placeholder="Berat Produk (dalam satuan gram)" autocomplete="off" required value="<?= $product['weight']; ?>" />
 						</div>
 					</div>
 				</div>

@@ -183,6 +183,14 @@ $rekening = $this->db->get('rekening');
         });
     })
 
+    // under contruction
+    $(".under-conturction").on('click', function() {
+        swal({
+            text: 'Sorry, under repair',
+            icon: 'warning'
+        });
+    })
+
     //loading screen
     $(window).ready(function() {
         $(".fakeLoader").fadeOut("slow");

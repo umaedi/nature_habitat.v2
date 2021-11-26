@@ -27,25 +27,25 @@ div.wrapper {
 }
 
 div.wrapper h2 {
-	font-family: "Open Sans";
+	font-family: "Poppins", sans-serif;
 	font-size: 22px;
 	font-weight: 600;
 }
 
 div.wrapper h3 {
-	font-family: "Open Sans";
+	font-family: "Poppins", sans-serif;
 	font-size: 19px;
 	font-weight: 600;
 }
 
 div.wrapper h4 {
-	font-family: "Open Sans";
+	font-family: "Poppins", sans-serif;
 	font-size: 17px;
 	font-weight: 600;
 }
 
 div.wrapper p {
-	font-family: "Open Sans";
+	font-family: "Poppins", sans-serif;
 	font-size: 15px;
 	margin-bottom: 10px;
 }

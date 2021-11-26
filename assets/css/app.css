@@ -894,7 +894,7 @@ footer div.information div.main div.about img.logo {
 
 footer div.information div.main div.about p {
 	color: #555;
-	font-family: "Open Sans";
+	font-family: "Poppins", sans-serif;
 	font-size: 15px;
 	font-weight: 500;
 	margin-top: 10px;
@@ -906,7 +906,7 @@ footer div.information div.main div.about div.sosmed {
 
 footer div.information div.main div.about div.sosmed h3 {
 	color: #222;
-	font-family: "Nunito";
+	font-family: "Poppins", sans-serif;
 	font-size: 17px;
 	margin-bottom: 7px;
 }
@@ -941,7 +941,7 @@ footer div.about-for-mobile img.logo {
 
 footer div.about-for-mobile p {
 	color: #555;
-	font-family: "Open Sans";
+	font-family: "Poppins", sans-serif;
 	font-size: 15px;
 	font-weight: 500;
 	margin-top: 10px;
@@ -953,7 +953,7 @@ footer div.about-for-mobile div.sosmed {
 
 footer div.about-for-mobile div.sosmed h3 {
 	color: #222;
-	font-family: "Nunito";
+	font-family: "Poppins", sans-serif;
 	font-size: 15px;
 	margin-bottom: 7px;
 }
@@ -970,7 +970,7 @@ footer div.about-for-mobile div.sosmed a:hover {
 
 footer div.information div.main h3.title {
 	color: #222;
-	font-family: "Nunito";
+	font-family: "Poppins", sans-serif;
 	font-size: 17px;
 	font-weight: 700;
 	margin-bottom: 10px;
@@ -980,7 +980,7 @@ footer div.information div.main div.item a,
 footer div.information div.main div.item p {
 	color: #555;
 	display: block;
-	font-family: "Open Sans";
+	font-family: "Poppins", sans-serif;
 	font-size: 15px;
 	font-weight: 400;
 	margin: 7px 0;
@@ -1026,7 +1026,7 @@ footer div.contact div.main div.item i {
 
 footer div.contact div.main div.item p {
 	color: #444;
-	font-family: "Nunito";
+	font-family: "Poppins", sans-serif;
 	font-size: 15px;
 	margin-top: 15px;
 	text-align: center;
@@ -1046,7 +1046,7 @@ footer div.copyright {
 
 footer div.copyright p {
 	color: #eee;
-	font-family: "Open Sans";
+	font-family: "Poppins", sans-serif;
 	font-size: 13px;
 	position: absolute;
 	left: 50%;

@@ -75,7 +75,7 @@ div.wrapper div.total {
 
 div.wrapper h2.title {
 	font-size: 18px;
-	font-family: "Open Sans";
+	font-family: "Poppins", sans-serif;
 	font-weight: 600;
 }
 
@@ -87,7 +87,7 @@ div.wrapper div.total div.list {
 
 div.wrapper div.total div.list p {
 	color: #555555;
-	font-family: "Nunito";
+	font-family: "Poppins", sans-serif;
 	font-size: 15px;
 	margin-bottom: 5px;
 }

@@ -71,7 +71,7 @@ div.wrapper div.top div.main-top div.ket h1.title {
 
 div.wrapper div.top div.main-top div.ket p.subtitle {
 	color: #666666;
-	font-family: "Open Sans";
+	font-family: "Poppins", sans-serif;
 	font-size: 14px;
 	font-weight: 600;
 }
@@ -87,28 +87,28 @@ div.wrapper div.top div.main-top div.ket table tr.newPrice td.price {
 
 div.wrapper div.top div.main-top div.ket table tr td.oldPrice {
 	color: #666666;
-	font-family: "Open Sans";
+	font-family: "Poppins", sans-serif;
 	font-size: 14px;
 	text-decoration: line-through;
 }
 
 div.wrapper div.top div.main-top div.ket table tr td {
 	color: #111;
-	font-family: "Open Sans";
+	font-family: "Poppins", sans-serif;
 	font-size: 15px;
 	font-weight: 400;
 }
 
 div.wrapper div.top div.main-top div.ket table tr td.t {
 	color: #555555;
-	font-family: "Nunito";
+	font-family: "Poppins", sans-serif;
 	font-size: 16px;
 	width: 150px;
 }
 
 div.wrapper div.top div.main-top div.ket table tr td.price {
 	color: #241305;
-	font-family: "Open Sans";
+	font-family: "Poppins", sans-serif;
 	font-size: 30px;
 	font-weight: 600;
 }
@@ -136,7 +136,7 @@ div.wrapper div.top div.main-top div.ket table tr td div.form-group {
 div.wrapper div.top div.main-top div.ket table tr td button {
 	background-color: #dae0e5;
 	border: 1px solid #dae0e5;
-	font-family: "Nunito";
+	font-family: "Poppins", sans-serif;
 	font-weight: 600;
 	height: 35px;
 	outline: none;

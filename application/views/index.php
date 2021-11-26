@@ -153,7 +153,7 @@
                             <a href="javascript:void(0);" class="action-link review-product" data-title="<?= $p['title']; ?>" data-desc="<?= $p['description']; ?>" data-img="<?= $p['img']; ?>"><i class="icon ti-eye"></i></a>
                           </li>
                           <?php if ($this->session->userdata('login')) { ?>
-                            <li class="item-action">
+                            <li class="item-action under-conturction">
                               <a href="javascript:void(0);" class="action-link addCart"><i class="icon icon-ecommerce-basket" data-id="<?= $p['productId']; ?>"></i></a>
                             </li>
                           <?php } else { ?>
@@ -240,7 +240,7 @@
                         </li>
                         <li class="item-action add-to-card">
                           <?php if ($this->session->userdata('login')) { ?>
-                        <li class="item-action addCartx">
+                        <li class="item-action addCartx under-conturction">
                           <a href="javascript:void(0);" class="action-link"><i class="icon icon-ecommerce-basket" data-id="<?= $p['id']; ?>"></i></a>
                         </li>
                       <?php } else { ?>
@@ -314,7 +314,7 @@
                         </li>
                         <li class="item-action add-to-card">
                           <?php if ($this->session->userdata('login')) { ?>
-                        <li class="item-action">
+                        <li class="item-action under-conturction">
                           <a href="javascript:void(0);" class="action-link addCart"><i class="icon icon-ecommerce-basket" data-id="<?= $p['productId']; ?>"></i></a>
                         </li>
                       <?php } else { ?>
@@ -386,7 +386,7 @@
                         </li>
                         <li class="item-action add-to-card">
                           <?php if ($this->session->userdata('login')) { ?>
-                        <li class="item-action">
+                        <li class="item-action under-conturction">
                           <a href="javascript:void(0);" class="action-link" id="addCart"><i class="icon icon-ecommerce-basket"></i></a>
                         </li>
                       <?php } else { ?>

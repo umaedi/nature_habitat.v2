@@ -63,7 +63,7 @@
 							<select class="form-control" id="cat" name="category_2">
 								<option selected disabled value="0">--Pilih Subkategori--</option>
 								<?php foreach ($categories2->result_array() as $c) : ?>
-									<option value="<?= $c['id'] ?>"><?= $c['name'] ?></option>
+									<option value="<?= $c['name'] ?>"><?= $c['name'] ?></option>
 								<?php endforeach; ?>
 							</select>
 						</div>

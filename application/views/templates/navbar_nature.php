@@ -54,7 +54,7 @@ $settingss = $this->db->get('settings')->row_array();
           <div class="row js-compare">
             <div class="ml-3">
               <div class="st2-header-logo">
-                <img src="<?= base_url(); ?>/assets/images/logo/nature_logo.png" alt="Logo">
+                <a href="<?= base_url(); ?>"><img src="<?= base_url(); ?>/assets/images/logo/nature_logo.png" alt="Logo"></a>
               </div>
             </div>
             <div class="col-lg-8 hide-reponsive js-dad">

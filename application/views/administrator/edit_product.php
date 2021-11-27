@@ -8,7 +8,7 @@
 	<!-- DataTales Example -->
 	<div class="card shadow mb-4">
 		<div class="card-header py-3">
-			<a href="<?= base_url(); ?>administrator/products" class="btn btn-danger"><i class="fa fa-times-circle"></i> Batal</a>
+			<a href="<?= base_url(); ?>administrator/products" class="btn btn-sm btn-warning"><i class="fa fa-times-circle"></i> Batal</a>
 		</div>
 		<div class="card-body">
 			<?php echo $this->session->flashdata('failed'); ?>
@@ -38,8 +38,7 @@
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="cat">Kategori</label>
-							<select class="form-control" id="cat" name="category">]
-								<option value="<?= $product['category'] ?>"><?= $product['name'] ?></option>
+							<select class="form-control" id="cat" name="category">
 								<?php foreach ($categories->result_array() as $c) : ?>
 									<option value="<?= $c['id'] ?>"><?= $c['name'] ?></option>
 								<?php endforeach; ?>
@@ -66,9 +65,8 @@
 						<div class="form-group">
 							<label for="cat">Subkategori</label>
 							<select class="form-control" id="cat" name="category_2">]
-								<option value="<?= $product['category'] ?>"><?= $product['name'] ?></option>
 								<?php foreach ($categories2->result_array() as $c) : ?>
-									<option value="<?= $c['id'] ?>"><?= $c['name'] ?></option>
+									<option value="<?= $c['name'] ?>"><?= $c['name'] ?></option>
 								<?php endforeach; ?>
 							</select>
 						</div>
@@ -130,7 +128,7 @@
 					<label for="description">Deskripsi</label>
 					<textarea class="form-control" id="description" name="description" rows="7" required><?= $product['description']; ?></textarea>
 				</div>
-				<button type="submit" class="btn btn-primary">Edit Produk</button>
+				<button type="submit" class="btn btn-sm btn-info"><i class="fas fa-save"></i> Simpan perubahan</button>
 			</form>
 		</div>
 	</div>

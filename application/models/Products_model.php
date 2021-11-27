@@ -6,8 +6,8 @@ class Products_model extends CI_Model
 
     public function getProducts($number, $offset)
     {
-        $this->db->select("products.id AS productsId, products.title AS productsTitle, products.price AS productsPrice, products.stock AS productsStock, products.date_submit AS productsDate, products.img AS productsImg, products.publish AS productsPublish, categories.name AS categoriesName");
-        $this->db->join("categories", "products.category=categories.id");
+        $this->db->select("products.id AS productsId, products.title AS productsTitle, products.price AS productsPrice, products.stock AS productsStock, products.date_submit AS productsDate, products.img AS productsImg, products.publish AS productsPublish, products.category_2 AS subkategori, categories.name AS categoriesName");
+        $this->db->join("categories", "products.category=categories.id", "products.category_2=categories.id");
         $this->db->order_by("products.id", "desc");
         return $this->db->get("products", $number, $offset);
     }
@@ -324,8 +324,8 @@ class Products_model extends CI_Model
             "size1" => $size1,
             "size2" => $size2,
             "stock" => $stock,
-            "category" => $category_2,
-            "category_2" => $category,
+            "category" => $category,
+            "category_2" => $category_2,
             "condit" => $condit,
             "weight" => $weight,
             "img" => $img,
@@ -343,8 +343,8 @@ class Products_model extends CI_Model
         $price = $this->input->post('price');
         $size = $this->input->post('size');
         $stock = $this->input->post('stock');
-        $category = $this->input->post('category_2');
-        $category_2 = $this->input->post('category');
+        $category = $this->input->post('category');
+        $category_2 = $this->input->post('category_2');
         $condit = $this->input->post('condit');
         $weight = $this->input->post('weight');
         $img = $img;
@@ -368,8 +368,8 @@ class Products_model extends CI_Model
             "price" => $price,
             "size"  => $size,
             "stock" => $stock,
-            "category" => $category_2,
-            "category_2" => $category,
+            "category" => $category,
+            "category_2" => $category_2,
             "condit" => $condit,
             "weight" => $weight,
             "img" => $img,

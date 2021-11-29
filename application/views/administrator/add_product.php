@@ -8,7 +8,7 @@
 	<!-- DataTales Example -->
 	<div class="card shadow mb-4">
 		<div class="card-header py-3">
-			<a href="<?= base_url(); ?>administrator/products" class="btn btn-danger"><i class="fa fa-times-circle"></i> Batal</a>
+			<a href="<?= base_url(); ?>administrator/products" class="btn btn-sm btn-warning"><i class="fa fa-times-circle"></i> Batal</a>
 		</div>
 		<div class="card-body">
 			<?php echo $this->session->flashdata('failed'); ?>
@@ -62,8 +62,8 @@
 							<label for="cat">Subkategori</label>
 							<select class="form-control" id="cat" name="category_2">
 								<option selected disabled value="0">--Pilih Subkategori--</option>
-								<?php foreach ($categories2->result_array() as $c) : ?>
-									<option value="<?= $c['name'] ?>"><?= $c['name'] ?></option>
+								<?php foreach ($subcategories->result_array() as $c) : ?>
+									<option value="<?= $c['id'] ?>"><?= $c['name'] ?></option>
 								<?php endforeach; ?>
 							</select>
 						</div>
@@ -111,12 +111,6 @@
 							<input type="text" class="form-control" id="title" name="size2" autocomplete="off" />
 						</div>
 					</div>
-					<div class="form-group">
-						<div class="col-md-12">
-							<label for="weight">Berat Produk</label>
-							<input type="number" class="form-control" id="weight" name="weight" placeholder="Dalam satuan" autocomplete="off" required value="<?= $product['weight']; ?>" />
-						</div>
-					</div>
 				</div>
 				<div class="form-group">
 					<label for="sendemail">Apakah kamu ingin mengirimkan notifikasi kepada pelanggan melalui email bahwa kamu telah menambah produk baru?</label>
@@ -129,7 +123,7 @@
 					<label for="description">Deskripsi</label>
 					<textarea class="form-control" id="description" name="description" rows="7"><?php echo set_value('description'); ?></textarea>
 				</div>
-				<button type="submit" class="btn btn-primary">Unggah Produk</button>
+				<button type="submit" class="btn btn-sm btn-info"><i class="fas fa-upload"></i> Unggah Produk</button>
 			</form>
 		</div>
 	</div>

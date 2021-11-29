@@ -6,13 +6,12 @@ class Categories_model extends CI_Model
 
     public function getCategories()
     {
-        $this->db->where(['role' => 1]);
+
         return $this->db->get('categories');
     }
-    public function getCategories2()
+    public function subCategories()
     {
-        $this->db->where(['role' => 2]);
-        return $this->db->get('categories');
+        return $this->db->get('sub_categories');
     }
 
     public function getCategoriesLimit()
@@ -23,10 +22,18 @@ class Categories_model extends CI_Model
 
     public function getCategoryById($id)
     {
-        return $this->db->get_where('categories', ['id' => $id])->row_array();
+        return $this->db->get_where('sub_categories', ['id' => $id])->row_array();
     }
 
     public function getIdCategoryBySlug($slug)
+    {
+        $this->db->where('slug', $slug);
+        $return = $this->db->get('sub_categories')->row_array();
+        return $return['id'];
+    }
+
+    // baru
+    public function getIdSubCategoryBySlug($slug)
     {
         $this->db->where('slug', $slug);
         $return = $this->db->get('categories')->row_array();
@@ -36,7 +43,7 @@ class Categories_model extends CI_Model
     public function getNameCategoryBySlug($slug)
     {
         $this->db->where('slug', $slug);
-        $return = $this->db->get('categories')->row_array();
+        $return = $this->db->get('sub_categories')->row_array();
         return $return['name'];
     }
 

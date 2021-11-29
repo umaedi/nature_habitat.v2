@@ -6,8 +6,9 @@ class Products_model extends CI_Model
 
     public function getProducts($number, $offset)
     {
-        $this->db->select("products.id AS productsId, products.title AS productsTitle, products.price AS productsPrice, products.stock AS productsStock, products.date_submit AS productsDate, products.img AS productsImg, products.publish AS productsPublish, products.category_2 AS subkategori, categories.name AS categoriesName");
-        $this->db->join("categories", "products.category=categories.id", "products.category_2=categories.id");
+        $this->db->select("products.id AS productsId, products.title AS productsTitle, products.price AS productsPrice, products.stock AS productsStock, products.date_submit AS productsDate, products.img AS productsImg, products.publish AS productsPublish, categories.name AS categoriesName, sub_categories.name AS subCategoriesName");
+        $this->db->join("categories", "products.category=categories.id");
+        $this->db->join("sub_categories", "products.sub_category=sub_categories.id");
         $this->db->order_by("products.id", "desc");
         return $this->db->get("products", $number, $offset);
     }
@@ -123,7 +124,57 @@ class Products_model extends CI_Model
         }
     }
 
+
     public function getAllProductsByCategory($c, $type = "")
+    {
+        if ($type == "") {
+            $this->db->where('publish', 1);
+            $this->db->where('sub_category', $c);
+            $this->db->order_by('id', 'desc');
+            return $this->db->get('products');
+        } else if ($type == "az") {
+            $this->db->where('publish', 1);
+            $this->db->where('sub_category', $c);
+            $this->db->order_by('title', 'asc');
+            return $this->db->get('products');
+        } else if ($type == "za") {
+            $this->db->where('publish', 1);
+            $this->db->where('sub_category', $c);
+            $this->db->order_by('title', 'desc');
+            return $this->db->get('products');
+        } else if ($type == "pricemax") {
+            $this->db->where('publish', 1);
+            $this->db->where('sub_category', $c);
+            $this->db->order_by('price', 'asc');
+            return $this->db->get('products');
+        } else if ($type == "pricemin") {
+            $this->db->where('publish', 1);
+            $this->db->where('sub_category', $c);
+            $this->db->order_by('price', 'desc');
+            return $this->db->get('products');
+        } else if ($type == "promo") {
+            $this->db->where('publish', 1);
+            $this->db->where('sub_category', $c);
+            $this->db->where('promo_price != 0');
+            $this->db->order_by('id', 'desc');
+            return $this->db->get('products');
+        } else if ($type == "1") {
+            $this->db->where('publish', 1);
+            $this->db->where('sub_category', $c);
+            $this->db->where('condit', 1);
+            $this->db->order_by('id', 'desc');
+            return $this->db->get('products');
+        } else if ($type == "2") {
+            $this->db->where('publish', 1);
+            $this->db->where('sub_category', $c);
+            $this->db->where('condit', 2);
+            $this->db->order_by('id', 'desc');
+            return $this->db->get('products');
+        }
+    }
+
+    // baru
+    public function getAllProductsBySubCategory($c, $type = "")
     {
         if ($type == "") {
             $this->db->where('publish', 1);
@@ -186,6 +237,23 @@ class Products_model extends CI_Model
     }
 
     public function getAllProductsByCategoryPrice($cat, $min, $max)
+    {
+        if ($max == "0") {
+            $this->db->where('publish', 1);
+            $this->db->where('sub_category', $cat);
+            $this->db->where('price >=', $min);
+            return $this->db->get('products');
+        } else {
+            $this->db->where('publish', 1);
+            $this->db->where('sub_category', $cat);
+            $this->db->where('price >=', $min);
+            $this->db->where('price <=', $max);
+            return $this->db->get('products');
+        }
+    }
+
+    // baru
+    public function getAllProductsBySubCategoryPrice($cat, $min, $max)
     {
         if ($max == "0") {
             $this->db->where('publish', 1);
@@ -297,7 +365,7 @@ class Products_model extends CI_Model
 
         $stock = $this->input->post('stock');
         $category = $this->input->post('category');
-        $category_2 = $this->input->post('category_2');
+        $sub_category = $this->input->post('category_2');
         $condit = $this->input->post('condit');
         $weight = $this->input->post('weight');
         $img = $upload['file']['file_name'];
@@ -325,7 +393,7 @@ class Products_model extends CI_Model
             "size2" => $size2,
             "stock" => $stock,
             "category" => $category,
-            "category_2" => $category_2,
+            "sub_category" => $sub_category,
             "condit" => $condit,
             "weight" => $weight,
             "img" => $img,
@@ -344,7 +412,7 @@ class Products_model extends CI_Model
         $size = $this->input->post('size');
         $stock = $this->input->post('stock');
         $category = $this->input->post('category');
-        $category_2 = $this->input->post('category_2');
+        $sub_category = $this->input->post('category_2');
         $condit = $this->input->post('condit');
         $weight = $this->input->post('weight');
         $img = $img;
@@ -369,7 +437,7 @@ class Products_model extends CI_Model
             "size"  => $size,
             "stock" => $stock,
             "category" => $category,
-            "category_2" => $category_2,
+            "sub_category" => $sub_category,
             "condit" => $condit,
             "weight" => $weight,
             "img" => $img,

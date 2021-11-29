@@ -147,7 +147,7 @@
                   <div class="box-item">
                     <div class="box-item-image">
                       <a href="<?= base_url(); ?>p/<?= $p['slug']; ?>"><img data-src="<?= base_url(); ?>assets/images/product/<?= $p['img']; ?>" class="lazyload" alt="Deal of the week"></a>
-                      <div class="button-loop-action">
+                      <!-- <div class="button-loop-action">
                         <ul class="loop-action">
                           <li class="item-action review">
                             <a href="javascript:void(0);" class="action-link review-product" data-title="<?= $p['title']; ?>" data-desc="<?= $p['description']; ?>" data-img="<?= $p['img']; ?>"><i class="icon ti-eye"></i></a>
@@ -162,7 +162,7 @@
                             </li>
                           <?php } ?>
                         </ul>
-                      </div>
+                      </div> -->
                     </div>
                     <div class="box-item-info">
                       <h3 class="text-center"><a href="" class="item-name"><?= $p['title']; ?></a></h3>
@@ -233,7 +233,7 @@
                     </div>
                   </div> -->
                     </div>
-                    <div class="button-loop-action">
+                    <!-- <div class="button-loop-action">
                       <ul class="loop-action">
                         <li class="item-action review">
                           <a class="action-link" href="javascript:void(0);"><i class="icon ti-eye"></i></a>
@@ -250,7 +250,7 @@
                       <?php } ?>
                       </li>
                       </ul>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               <?php endforeach; ?>
@@ -287,9 +287,11 @@
               <?php foreach ($kategoriIndoor->result_array() as $p) : ?>
                 <div class="col-xl-3 col-md-6 col-lg-4 col-sm-6 col-12">
                   <div class="box-item">
-                    <div class="box-item-image">
-                      <img data-src="<?= base_url(); ?>assets/images/product/<?= $p['img']; ?>" class="lazyload" alt="Category">
-                    </div>
+                    <a href="<?= base_url(); ?>products">
+                      <div class="box-item-image">
+                        <img data-src="<?= base_url(); ?>assets/images/product/<?= $p['img']; ?>" class="lazyload" alt="Category">
+                      </div>
+                    </a>
                     <div class="box-item-info">
                       <h4 class=""><a href="" class="item-name"><?= $p['title']; ?></a></h4>
                       <!-- <div class="item-price-rate">
@@ -307,7 +309,7 @@
                     </div>
                   </div> -->
                     </div>
-                    <div class="button-loop-action">
+                    <!-- <div class="button-loop-action">
                       <ul class="loop-action">
                         <li class="item-action review">
                           <a class="action-link" href="<?= base_url(); ?>p/<?= $p['slug']; ?>"><i class="icon ti-eye"></i></a>
@@ -324,7 +326,7 @@
                       <?php } ?>
                       </li>
                       </ul>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               <?php endforeach; ?>
@@ -359,9 +361,11 @@
               <?php foreach ($kategoriOutdoor->result_array() as $p) : ?>
                 <div class="col-xl-3 col-md-6 col-lg-4 col-sm-6 col-12">
                   <div class="box-item">
-                    <div class="box-item-image">
-                      <img data-src="<?= base_url(); ?>assets/images/product/<?= $p['img']; ?>" class="lazyload" alt="Category">
-                    </div>
+                    <a href="<?= base_url(); ?>products">
+                      <div class="box-item-image">
+                        <img data-src="<?= base_url(); ?>assets/images/product/<?= $p['img']; ?>" class="lazyload" alt="Category">
+                      </div>
+                    </a>
                     <div class="box-item-info">
                       <h3 class=""><a href="" class="item-name"><?= $p['title']; ?></a></h3>
                       <!-- <div class="item-price-rate">
@@ -379,7 +383,7 @@
                     </div>
                   </div> -->
                     </div>
-                    <div class="button-loop-action">
+                    <!-- <div class="button-loop-action">
                       <ul class="loop-action">
                         <li class="item-action review">
                           <a class="action-link" href="<?= base_url(); ?>p/<?= $p['slug']; ?>"><i class="icon ti-eye"></i></a>
@@ -396,7 +400,7 @@
                       <?php } ?>
                       </li>
                       </ul>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               <?php endforeach; ?>
@@ -480,69 +484,6 @@
 <!-- end test -->
 </div>
 
-<!-- Modal getsubmenu -->
-<div class="modal fade" id="getSubmenu" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title ml-3" id="exampleModalLabel">List Of Our Product Collection</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body" style="width: 90% !important">
-        <div class="container">
-          <div class="row">
-            <div class="col-6">
-              <p class="font-weight-bold ml-4">Indoor</p>
-              <?php if ($kategoriIndoor < 10) { ?>
-                <?php foreach ($kategoriIndoor->result_array() as $p) : ?>
-                  <a href="<?= base_url(); ?>p/<?= $p['slug']; ?>">
-                    <div class="dropdown-item"><?= $p['title']; ?></div>
-                  </a>
-                <?php endforeach; ?>
-                <a href="<?= base_url(); ?>login?redirect=c/indoor"><button type="submit" class="btn btn-sm btn-success ml-4 mt-3" style="width: 100%; background-color: #748a53 !important; border: none">View More</button></a>
-              <?php } else { ?>
-                <?php foreach ($kategoriIndoor->result_array() as $p) : ?>
-                  <a href="<?= base_url(); ?>p/<?= $p['slug']; ?>">
-                    <div class="dropdown-item"><?= $p['title']; ?></div>
-                  </a>
-                <?php endforeach; ?>
-                <?php if ($this->session->userdata('login')) { ?>
-                  <a href="<?= base_url(); ?>c/indoor"><button type="submit" class="btn btn-sm btn-success ml-4 mt-3" style="width: 100%; background-color: #748a53 !important; border: none">View More</button></a>
-                <?php } else { ?>
-                  <a href="<?= base_url(); ?>login?redirect=c/indoor"><button type="submit" class="btn btn-sm btn-success ml-4 mt-3" style="width: 100%; background-color: #748a53 !important; border: none">View More</button></a>
-                <?php } ?>
-              <?php } ?>
-            </div>
-            <div class="col-6">
-              <p class="font-weight-bold ml-4">Outdoor</p>
-              <?php if ($kategoriOutdoor > 10) { ?>
-                <?php foreach ($kategoriOutdoor->result_array() as $p) : ?>
-                  <a href="<?= base_url(); ?>p/<?= $p['slug']; ?>">
-                    <div class="dropdown-item"><?= $p['title']; ?></div>
-                  </a>
-                  <a href="<?= base_url(); ?>login?redirect=c/outdoor"><button type="submit" class="btn btn-sm btn-success ml-4 mt-3" style="width: 100%; background-color: #748a53 !important; border: none">View More</button></a>
-                <?php endforeach; ?>
-              <?php } else { ?>
-                <?php foreach ($kategoriOutdoor->result_array() as $p) : ?>
-                  <a href="<?= base_url(); ?>p/<?= $p['slug']; ?>">
-                    <div class="dropdown-item"><?= $p['title']; ?></div>
-                  </a>
-                <?php endforeach; ?>
-                <?php if ($this->session->userdata('login')) { ?>
-                  <a href="<?= base_url(); ?>c/outdoor"><button type="submit" class="btn btn-sm btn-success ml-4 mt-3" style="width: 100%; background-color: #748a53 !important; border: none">View More</button></a>
-                <?php } else { ?>
-                  <!-- <a href="<?= base_url(); ?>login?redirect=c/outdoor"><button type="submit" class="btn btn-sm btn-success ml-4 mt-3" style="width: 100%; background-color: #748a53 !important; border: none">View More</button></a> -->
-                <?php  } ?>
-              <?php } ?>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script>

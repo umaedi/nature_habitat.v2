@@ -65,8 +65,8 @@
 						<div class="form-group">
 							<label for="cat">Subkategori</label>
 							<select class="form-control" id="cat" name="category_2">]
-								<?php foreach ($categories2->result_array() as $c) : ?>
-									<option value="<?= $c['name'] ?>"><?= $c['name'] ?></option>
+								<?php foreach ($subcategories->result_array() as $c) : ?>
+									<option value="<?= $c['id'] ?>"><?= $c['name'] ?></option>
 								<?php endforeach; ?>
 							</select>
 						</div>

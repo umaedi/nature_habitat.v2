@@ -8,7 +8,7 @@
 	<!-- DataTales Example -->
 	<div class="card shadow mb-4">
 		<div class="card-header py-3">
-			<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#addCategory">Tambah Kategori</a>
+			<a href="#" class="btn btn-sm btn-info" data-toggle="modal" data-target="#addCategory"><i class="fas fa-plus"></i> Tambah Kategori</a>
 		</div>
 		<div class="card-body">
 			<?php echo $this->session->flashdata('failed'); ?>
@@ -35,7 +35,7 @@
 									<td><?= $data['slug']; ?></td>
 									<td>
 										<a href="<?= base_url(); ?>administrator/category/<?= $data['id']; ?>" class="btn btn-sm btn-info"><i class="fa fa-pen"></i></a>
-										<a href="<?= base_url(); ?>administrator/deleteCategory/<?= $data['id']; ?>" onclick="return confirm('Yakin ingin menghapus kategori? Semua produk dengan kategori ini akan ikut terhapus')" class="btn btn-sm btn-danger"><i class="fa fa-trash-alt"></i></a>
+										<a href="#" id="deleteCategory" class="btn btn-sm btn-danger"><i class="fa fa-trash-alt"></i></a>
 									</td>
 								</tr>
 								<?php $no++ ?>

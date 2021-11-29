@@ -44,7 +44,7 @@
 									<td><?= str_replace(",", ".", number_format($data['productsPrice'])); ?><small><a href="<?= base_url(); ?>administrator/product/grosir/<?= $data['productsId']; ?>" target="_blank" class="btn-block mt-2">Tambah Grosir</a></small></td>
 									<td><?= $data['productsStock']; ?></td>
 									<td><?= $data['categoriesName']; ?></td>
-									<td><?= $data['subkategori']; ?></td>
+									<td><?= $data['subCategoriesName']; ?></td>
 									<td><?= $data['productsDate']; ?></td>
 									<?php if ($data['productsPublish'] == 1) { ?>
 										<td class="text-center"><i class="fas fa-check"></i></td>

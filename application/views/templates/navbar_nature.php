@@ -86,13 +86,13 @@ $settingss = $this->db->get('settings')->row_array();
                                     <div class="submenu-custom">
                                       <ul class="st2-submenu-item-ul">
                                         <li class="st2-submenu-item-li">
-                                          <a href="<?= base_url(); ?>c/sofa-deep-seating" class="st2-submenu-item-link">Sofa & Deep Seating</a>
+                                          <a href="<?= base_url(); ?>c/sofa-and-deep-seating" class="st2-submenu-item-link">Sofa & Deep Seating</a>
                                         </li>
                                         <li class="st2-submenu-item-li">
                                           <a href="<?= base_url(); ?>c/dining-table" class="st2-submenu-item-link">Dining Table</a>
                                         </li>
                                         <li class="st2-submenu-item-li">
-                                          <a href="<?= base_url(); ?>c/coffee-table" class="st2-submenu-item-link">Coffee Table</a>
+                                          <a href="<?= base_url(); ?>c/coffe-table" class="st2-submenu-item-link">Coffee Table</a>
                                         </li>
                                         <li class="st2-submenu-item-li">
                                           <a href="<?= base_url(); ?>c/chairs" class="st2-submenu-item-link">Chairs</a>

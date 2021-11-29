@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 $route['default_controller'] = 'home';
 $route['404_override'] = 'home/notfound';
@@ -12,6 +12,7 @@ $route['snap'] = 'snap';
 $route['transaction'] = 'transaction';
 $route['notification'] = 'notification';
 $route['c/(:any)'] = 'categories/index/$1';
+$route['categories/(:any)'] = 'categories/categories/$1';
 $route['promo'] = 'promo/index';
 $route['p/(:any)'] = 'products/detail_product/$1';
 $route['products'] = 'products/index';

@@ -287,7 +287,7 @@
               <?php foreach ($kategoriIndoor->result_array() as $p) : ?>
                 <div class="col-xl-3 col-md-6 col-lg-4 col-sm-6 col-12">
                   <div class="box-item">
-                    <a href="<?= base_url(); ?>products">
+                    <a href="<?= base_url(); ?>category/indoor">
                       <div class="box-item-image">
                         <img data-src="<?= base_url(); ?>assets/images/product/<?= $p['img']; ?>" class="lazyload" alt="Category">
                       </div>
@@ -361,7 +361,7 @@
               <?php foreach ($kategoriOutdoor->result_array() as $p) : ?>
                 <div class="col-xl-3 col-md-6 col-lg-4 col-sm-6 col-12">
                   <div class="box-item">
-                    <a href="<?= base_url(); ?>products">
+                    <a href="<?= base_url(); ?>category/outdoor">
                       <div class="box-item-image">
                         <img data-src="<?= base_url(); ?>assets/images/product/<?= $p['img']; ?>" class="lazyload" alt="Category">
                       </div>

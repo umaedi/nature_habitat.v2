@@ -40,7 +40,7 @@ class Categories_model extends CI_Model
         return $return['id'];
     }
 
-    public function getNameCategoryBySlug($slug)
+    public function getNameSubCategoryBySlug($slug)
     {
         $this->db->where('slug', $slug);
         $return = $this->db->get('sub_categories')->row_array();

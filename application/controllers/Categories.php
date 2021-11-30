@@ -79,7 +79,7 @@ class Categories extends CI_Controller
 	}
 
 	// baru
-	public function categories($c)
+	public function category($c)
 	{
 		$cat = $this->Categories_model->getIdSubCategoryBySlug($c);
 		$ob = $_GET['ob'];

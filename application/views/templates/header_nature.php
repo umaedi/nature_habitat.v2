@@ -61,6 +61,7 @@ $setting = $this->db->get('settings')->row_array();
   <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/css/app.css">
   <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/css/app-responsive.css">
   <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/css/<?= $css;  ?>.css">
+  <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/css/<?= $responsive;  ?>.css">
 
   <link rel="shortcut icon" href="<?= base_url();  ?>assets/images/logo/<?= $setting['favicon']; ?>" type="image/x-icon" />
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

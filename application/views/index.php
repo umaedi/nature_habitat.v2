@@ -83,6 +83,7 @@
       </a>
     </div>
   </div>
+
   <!-- Category -->
   <section class="st2-categories" data-aos="fade-up" data-aos-duration="1000">
     <div class="container mt-3">
@@ -189,7 +190,7 @@
           </div>
           <div class="container">
             <div class="row justify-content-center">
-              <div class="col-6">
+              <div class="col-md-6">
                 <?php if ($allProducts->num_rows() > 4) { ?>
                   <?php if ($this->session->userdata('login')) { ?>
                     <a href="<?= base_url(); ?>products"><button class="more">View more our product</button></a>
@@ -261,7 +262,7 @@
           </div>
           <div class="container">
             <div class="row justify-content-center">
-              <div class="col-6">
+              <div class="col-md-6">
                 <?php if ($allProducts->num_rows() > 4) { ?>
                   <?php if ($this->session->userdata('login')) { ?>
                     <a href="<?= base_url(); ?>products"><button class="more">View more our product</button></a>
@@ -337,7 +338,7 @@
           </div>
           <div class="container">
             <div class="row justify-content-center">
-              <div class="col-6">
+              <div class="col-md-6">
                 <?php if ($allProducts->num_rows() > 4) { ?>
                   <?php if ($this->session->userdata('login')) { ?>
                     <a href="<?= base_url(); ?>products"><button class="more">View more our product</button></a>
@@ -411,7 +412,7 @@
           </div>
           <div class="container">
             <div class="row justify-content-center">
-              <div class="col-6">
+              <div class="col-md-6">
                 <?php if ($allProducts->num_rows() > 4) { ?>
                   <?php if ($this->session->userdata('login')) { ?>
                     <a href="<?= base_url(); ?>products"><button class="more">View more our product</button></a>
@@ -428,17 +429,21 @@
     </section>
   </div>
   <div class="container mt-5">
-    <div class="explore">
-      <div class="explore-img">
-        <?php if ($allProducts->num_rows() > 4) { ?>
-          <?php if ($this->session->userdata('login')) { ?>
-            <a href="<?= base_url(); ?>products">
-            <?php } else { ?>
-              <a href="<?= base_url(); ?>login?redirect=products">
-              <?php } ?>
-            <?php } ?>
-            <img data-src="<?= base_url(); ?>assets/images/banner/explore.jpg" class="img-fluid lazyload">
-              </a>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="explore">
+          <div class="explore-img">
+            <?php if ($allProducts->num_rows() > 4) { ?>
+              <?php if ($this->session->userdata('login')) { ?>
+                <a href="<?= base_url(); ?>products">
+                <?php } else { ?>
+                  <a href="<?= base_url(); ?>login?redirect=products">
+                  <?php } ?>
+                <?php } ?>
+                <img data-src="<?= base_url(); ?>assets/images/banner/explore.jpg" class="img-fluid lazyload">
+                  </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>

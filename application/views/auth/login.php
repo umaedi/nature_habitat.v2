@@ -6,7 +6,7 @@
     <p class="subtitle">Please login to the account now</p>
 
     <div class="row justify-content-center">
-        <div class="col-6">
+        <div class="col-md-6">
             <?php echo $this->session->flashdata('failed'); ?>
             <form action="<?= base_url(); ?>login?redirect=<?= $redirect; ?>" method="post">
                 <div class="form-group">

@@ -91,6 +91,14 @@
 	}
 }
 
+@media screen and (max-width: 425px) {
+	footer div.copyright p {
+		font-size: 12px;
+		padding: 10px 0;
+		position: relative;
+	}
+}
+
 @media screen and (max-width: 1280px) {
 	.st2-categories {
 		top: 50px !important;

@@ -199,7 +199,7 @@ $settingss = $this->db->get('settings')->row_array();
                 <!-- cart -->
                 <div class="st2-cart-block st2-control-block js-click-cart">
                   <div class="st2-cart-icon">
-                    <span class="icon-ecommerce-basket"></span>
+                    <span class="icon-ecommerce-basket icon-menu"></span>
                     <?php if ($this->session->userdata('login')) { ?>
                       <?php if ($cart->num_rows() > 0) { ?>
                         <span class="st2-cart-number"><?= $cart->num_rows(); ?></span>
@@ -213,7 +213,7 @@ $settingss = $this->db->get('settings')->row_array();
                     <?php if (!$this->session->userdata('login')) { ?>
                       <a href="<?= base_url(); ?>login" span class="lnr lnr-user" style="color: #222"></a>
                     <?php } else { ?>
-                      <a href="<?= base_url(); ?>profile" span class="lnr lnr-user" style="color: #222"></a>
+                      <a href="<?= base_url(); ?>profile" span class="lnr lnr-user icon-menu" style="color: #222"></a>
                     <?php } ?>
                   </div>
                 </div>

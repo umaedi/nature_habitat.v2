@@ -94,7 +94,7 @@
               <!-- categories 1 -->
               <div class="st2-categories-box-item">
                 <div class="st2-categories-item">
-                  <a href="<?= base_url(); ?>c/<?= $c['slug']; ?>" class="st2-categories-link">
+                  <a href="<?= base_url(); ?>products" class="st2-categories-link">
                     <div class="st2-categories-thum">
                       <img data-src="<?= base_url(); ?>assets/images/icon/<?= $c['icon']; ?>" class="lazyload" alt="Category">
                     </div>

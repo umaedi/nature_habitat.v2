@@ -37,6 +37,7 @@ class Payment extends CI_Controller
         }
         $data['title'] = 'Pembayaran - ' . $this->Settings_model->general()["app_name"];
         $data['css'] = 'payment';
+        $data['responsive'] = 'product-responsive';
         $data['cart'] = $this->Order_model->getCartUser();
         $data['provinces'] = $this->Payment_model->getProvinces();
         $this->load->view('templates/header_nature', $data);

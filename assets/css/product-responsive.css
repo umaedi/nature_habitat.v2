@@ -13,6 +13,27 @@
 		right: 3px;
 		color: #fff;
 	}
+	.header-bottom
+		.header-bottom-st2-wrapper
+		.header-bottom-st2-inner
+		.st2-control-right
+		.st2-cart-block
+		.st2-cart-icon
+		.st2-cart-number {
+		letter-spacing: 0;
+		font-size: 12px;
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		background: #fff;
+		color: #748a53;
+		line-height: 15px;
+		text-align: center;
+		border-radius: 50%;
+		top: 40%;
+		right: 24px;
+		opacity: 1;
+	}
 }
 
 @media screen and (max-width: 1250px) {

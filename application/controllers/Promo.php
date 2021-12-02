@@ -17,6 +17,7 @@ class Promo extends CI_Controller
 	{
 		$data['title'] = 'Promo - ' . $this->Settings_model->general()["app_name"];
 		$data['css'] = 'promo';
+		$data['responsive'] = 'product-responsive';
 		$data['promo'] = $this->Promo_model->getPromo();
 		$data['setting'] = $this->Settings_model->getSetting();
 		$this->load->view('templates/header_nature', $data);

@@ -35,7 +35,7 @@ class Cart extends CI_Controller
     {
         $data['title'] = 'Keranjang - ' . $this->Settings_model->general()["app_name"];
         $data['css'] = 'cart';
-        $data['responsive'] = '';
+        $data['responsive'] = 'product-responsive';
         $data['cart'] = $this->Order_model->getCartUser();
         $this->load->view('templates/header_nature', $data);
         $this->load->view('templates/navbar_nature');

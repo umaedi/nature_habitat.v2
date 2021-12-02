@@ -34,6 +34,7 @@ class Profile extends CI_Controller
     {
         $data['title'] = 'Profil - ' . $this->Settings_model->general()["app_name"];
         $data['css'] = 'profile';
+        $data['responsive'] = 'product-responsive';
         $this->load->view('templates/header_nature', $data);
         $this->load->view('templates/navbar_nature');
         $this->load->view('profile/index');
@@ -44,6 +45,7 @@ class Profile extends CI_Controller
     {
         $data['title'] = 'Transaksi - ' . $this->Settings_model->general()["app_name"];
         $data['css'] = 'profile';
+        $data['responsive'] = 'product-responsive';
         $data['transaction'] = $this->User_model->getOrder();
         $this->load->view('templates/header_nature', $data);
         $this->load->view('templates/navbar_nature');
@@ -59,6 +61,7 @@ class Profile extends CI_Controller
         }
         $data['title'] = 'Detail Pesanan - ' . $this->Settings_model->general()["app_name"];
         $data['css'] = 'profile';
+        $data['responsive'] = 'product-responsive';
         $data['product_order'] = $this->User_model->getProductByInvoice($id);
         $this->load->view('templates/header_nature', $data);
         $this->load->view('templates/navbar_nature');
@@ -87,6 +90,7 @@ class Profile extends CI_Controller
     {
         $data['title'] = 'Riwayat Transaksi - ' . $this->Settings_model->general()["app_name"];
         $data['css'] = 'profile';
+        $data['responsive'] = 'product-responsive';
         $data['finish'] = $this->User_model->getFinishOrder();
         $this->load->view('templates/header_nature', $data);
         $this->load->view('templates/navbar_nature');
@@ -102,6 +106,7 @@ class Profile extends CI_Controller
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Edit Profil - ' . $this->Settings_model->general()["app_name"];
             $data['css'] = 'profile';
+            $data['responsive'] = 'product-responsive';
             $data['user'] = $this->User_model->getProfile();
             $this->load->view('templates/header_nature', $data);
             $this->load->view('templates/navbar_nature');
@@ -153,6 +158,7 @@ class Profile extends CI_Controller
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Ganti Kata Sandi - ' . $this->Settings_model->general()["app_name"];
             $data['css'] = 'profile';
+            $data['responsive'] = 'product-responsive';
             $this->load->view('templates/header_nature', $data);
             $this->load->view('templates/navbar_nature');
             $this->load->view('profile/change_password', $data);

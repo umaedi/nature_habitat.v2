@@ -1680,6 +1680,15 @@ class Administrator extends CI_Controller
         }
     }
 
+    public function user_detail($id)
+    {
+        $data['title'] = 'Data Pengguna - Admin Panel';
+        $data['user'] = $this->User_model->getUserById($id);
+        $this->load->view('templates/header_admin', $data);
+        $this->load->view('administrator/user_detail', $data);
+        $this->load->view('templates/footer_admin');
+    }
+
     public function logout()
     {
         $sess = ['admin'];

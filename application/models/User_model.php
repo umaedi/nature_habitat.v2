@@ -10,6 +10,11 @@ class User_model extends CI_Model
         return $this->db->get('user', $number, $offset);
     }
 
+    public function getUserById($id)
+    {
+        return $this->db->get_where('user', ['id' => $id])->row_array();
+    }
+
     public function getProfile()
     {
         $id = $this->session->userdata('id');

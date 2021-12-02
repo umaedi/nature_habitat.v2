@@ -94,14 +94,18 @@
               <!-- categories 1 -->
               <div class="st2-categories-box-item">
                 <div class="st2-categories-item">
-                  <a href="category/<?= $c['slug']; ?>" class="st2-categories-link">
-                    <div class="st2-categories-thum">
-                      <img data-src="<?= base_url(); ?>assets/images/icon/<?= $c['icon']; ?>" class="lazyload" alt="Category">
-                    </div>
-                    <div class="st2-categories-info tx-center">
-                      <h4 class="st2-categories-name text-center"><?= $c['name']; ?></h4>
-                    </div>
-                  </a>
+                  <?php if ($this->session->userdata('login')) { ?>
+                    <a href="category/<?= $c['slug']; ?>" class="st2-categories-link">
+                    <?php } else { ?>
+                      <a href="<?= base_url(); ?>login" class="st2-categories-link">
+                      <?php } ?>
+                      <div class="st2-categories-thum">
+                        <img data-src="<?= base_url(); ?>assets/images/icon/<?= $c['icon']; ?>" class="lazyload" alt="Category">
+                      </div>
+                      <div class="st2-categories-info tx-center">
+                        <h4 class="st2-categories-name text-center"><?= $c['name']; ?></h4>
+                      </div>
+                      </a>
                 </div>
               </div>
             </div>

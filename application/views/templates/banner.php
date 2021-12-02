@@ -34,10 +34,16 @@
           <div class="st2-slide-content">
             <h2 class="st2-slide-title">New Arrival <br>Summer New Collection</h2>
             <p class="st2-slide-des">Bring Freshness To Your Architecture</p>
-            <button class="st2-btn-submit st2-submit-slide">
-              <span class="st2-submit-text">Shop Now</span>
-              <span class="st2-submit-icon"><i class="lnr lnr-arrow-right"></i></span>
-            </button>
+            <?php if ($this->session->userdata('login')) { ?>
+              <a href="<?= base_url(); ?>products">
+              <?php } else { ?>
+                <a href="<?= base_url(); ?>login">
+                <?php } ?>
+                <button class="st2-btn-submit st2-submit-slide">
+                  <span class="st2-submit-text">Shop Now</span>
+                  <span class="st2-submit-icon"><i class="lnr lnr-arrow-right"></i></span>
+                </button>
+                </a>
           </div>
         </div>
       </div>

@@ -65,111 +65,121 @@ $settingss = $this->db->get('settings')->row_array();
                     <li class="st2-li-primary">
                       <a class="st2-item-link" href="<?= base_url(); ?>">Home</a>
                     </li>
-                    <li class="st2-li-primary">
-                      <a class="st2-item-link" href="#">Products Collections</a>
-                      <!-- submenu home -->
-                      <div class="st2-hamadryad-megamenu megamenu-home js-dropmenu megamenu-bg-active1">
-                        <section class="st2-hamadryad-megamenu-modal home">
-                          <div class="container-fluid">
-                            <div class="st2-hamadryad-submenu-wrapper">
-                              <div class="row">
-                                <div class="col-md-6">
-                                  <h2 class="text-custom text-center">Indoor</h2>
-                                  <hr>
-                                </div>
-                                <div class="col-md-6">
-                                  <h2 class="text-custom text-center">Outdoor</h2>
-                                  <hr>
-                                </div>
-                                <div class="col-md-3">
-                                  <div class="st2-submenu-list-item">
-                                    <div class="submenu-custom">
-                                      <ul class="st2-submenu-item-ul">
-                                        <li class="st2-submenu-item-li">
-                                          <a href="<?= base_url(); ?>c/sofa-and-deep-seating" class="st2-submenu-item-link">Sofa & Deep Seating</a>
-                                        </li>
-                                        <li class="st2-submenu-item-li">
-                                          <a href="<?= base_url(); ?>c/dining-table" class="st2-submenu-item-link">Dining Table</a>
-                                        </li>
-                                        <li class="st2-submenu-item-li">
-                                          <a href="<?= base_url(); ?>c/coffe-table" class="st2-submenu-item-link">Coffee Table</a>
-                                        </li>
-                                        <li class="st2-submenu-item-li">
-                                          <a href="<?= base_url(); ?>c/chairs" class="st2-submenu-item-link">Chairs</a>
-                                        </li>
-                                      </ul>
+                    <?php if ($this->session->userdata('login')) { ?>
+                      <li class="st2-li-primary">
+                        <a class="st2-item-link" href="#">Products Collections</a>
+                        <!-- submenu home -->
+                        <div class="st2-hamadryad-megamenu megamenu-home js-dropmenu megamenu-bg-active1">
+                          <section class="st2-hamadryad-megamenu-modal home">
+                            <div class="container-fluid">
+                              <div class="st2-hamadryad-submenu-wrapper">
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <h2 class="text-custom text-center">Indoor</h2>
+                                    <hr>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <h2 class="text-custom text-center">Outdoor</h2>
+                                    <hr>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <div class="st2-submenu-list-item">
+                                      <div class="submenu-custom">
+                                        <ul class="st2-submenu-item-ul">
+                                          <li class="st2-submenu-item-li">
+                                            <a href="<?= base_url(); ?>c/sofa-and-deep-seating" class="st2-submenu-item-link">Sofa & Deep Seating</a>
+                                          </li>
+                                          <li class="st2-submenu-item-li">
+                                            <a href="<?= base_url(); ?>c/dining-table" class="st2-submenu-item-link">Dining Table</a>
+                                          </li>
+                                          <li class="st2-submenu-item-li">
+                                            <a href="<?= base_url(); ?>c/coffe-table" class="st2-submenu-item-link">Coffee Table</a>
+                                          </li>
+                                          <li class="st2-submenu-item-li">
+                                            <a href="<?= base_url(); ?>c/chairs" class="st2-submenu-item-link">Chairs</a>
+                                          </li>
+                                        </ul>
+                                      </div>
                                     </div>
                                   </div>
-                                </div>
-                                <div class="col-md-3">
-                                  <div class="st2-submenu-list-item">
-                                    <div class="submenu-custom">
-                                      <ul class="st2-submenu-item-ul">
-                                        <li class="st2-submenu-item-li">
-                                          <a href="<?= base_url(); ?>c/dresser-cabinet" class="st2-submenu-item-link">Dresser Cabinet</a>
-                                        </li>
-                                        <li class="st2-submenu-item-li">
-                                          <a href="<?= base_url(); ?>c/bed-bedside" class="st2-submenu-item-link">Bed & Bedside</a>
-                                        </li>
-                                        <li class="st2-submenu-item-li">
-                                          <a href="<?= base_url(); ?>c/bookrack" class="st2-submenu-item-link">Bookrack</a>
-                                        </li>
-                                        <li class="st2-submenu-item-li">
-                                          <a href="<?= base_url(); ?>c/entertainment-tv-unit" class="st2-submenu-item-link">Entertainment TV Unit</a>
-                                        </li>
-                                      </ul>
+                                  <div class="col-md-3">
+                                    <div class="st2-submenu-list-item">
+                                      <div class="submenu-custom">
+                                        <ul class="st2-submenu-item-ul">
+                                          <li class="st2-submenu-item-li">
+                                            <a href="<?= base_url(); ?>c/dresser-cabinet" class="st2-submenu-item-link">Dresser Cabinet</a>
+                                          </li>
+                                          <li class="st2-submenu-item-li">
+                                            <a href="<?= base_url(); ?>c/bed-bedside" class="st2-submenu-item-link">Bed & Bedside</a>
+                                          </li>
+                                          <li class="st2-submenu-item-li">
+                                            <a href="<?= base_url(); ?>c/bookrack" class="st2-submenu-item-link">Bookrack</a>
+                                          </li>
+                                          <li class="st2-submenu-item-li">
+                                            <a href="<?= base_url(); ?>c/entertainment-tv-unit" class="st2-submenu-item-link">Entertainment TV Unit</a>
+                                          </li>
+                                        </ul>
+                                      </div>
                                     </div>
                                   </div>
-                                </div>
-                                <div class="col-md-3">
-                                  <div class="st2-submenu-list-item">
-                                    <div class="submenu-custom">
-                                      <ul class="st2-submenu-item-ul">
-                                        <li class="st2-submenu-item-li">
-                                          <a href="<?= base_url(); ?>c/sofa-deep-seating" class="st2-submenu-item-link">Sofa & Deep Seating</a>
-                                        </li>
-                                        <li class="st2-submenu-item-li">
-                                          <a href="<?= base_url(); ?>c/dining-table" class="st2-submenu-item-link">Dining Table</a>
-                                        </li>
-                                        <li class="st2-submenu-item-li">
-                                          <a href="<?= base_url(); ?>c/bar-table" class="st2-submenu-item-link">Bar Table</a>
-                                        </li>
-                                        <li class="st2-submenu-item-li">
-                                          <a href="<?= base_url(); ?>c/bar-chair" class="st2-submenu-item-link">Bar Chair</a>
-                                        </li>
-                                      </ul>
+                                  <div class="col-md-3">
+                                    <div class="st2-submenu-list-item">
+                                      <div class="submenu-custom">
+                                        <ul class="st2-submenu-item-ul">
+                                          <li class="st2-submenu-item-li">
+                                            <a href="<?= base_url(); ?>c/sofa-deep-seating" class="st2-submenu-item-link">Sofa & Deep Seating</a>
+                                          </li>
+                                          <li class="st2-submenu-item-li">
+                                            <a href="<?= base_url(); ?>c/dining-table" class="st2-submenu-item-link">Dining Table</a>
+                                          </li>
+                                          <li class="st2-submenu-item-li">
+                                            <a href="<?= base_url(); ?>c/bar-table" class="st2-submenu-item-link">Bar Table</a>
+                                          </li>
+                                          <li class="st2-submenu-item-li">
+                                            <a href="<?= base_url(); ?>c/bar-chair" class="st2-submenu-item-link">Bar Chair</a>
+                                          </li>
+                                        </ul>
+                                      </div>
                                     </div>
                                   </div>
-                                </div>
-                                <div class="col-md-3">
-                                  <div class="st2-submenu-list-item">
-                                    <div class="submenu-custom">
-                                      <ul class="st2-submenu-item-ul">
-                                        <li class="st2-submenu-item-li">
-                                          <a href="<?= base_url(); ?>c/chairs" class="st2-submenu-item-link">Chairs</a>
-                                        </li>
-                                        <li class="st2-submenu-item-li">
-                                          <a href="<?= base_url(); ?>c/loungers-and-sunbed" class="st2-submenu-item-link">Loungers and Sunbed</a>
-                                        </li>
-                                        <li class="st2-submenu-item-li">
-                                          <a href="<?= base_url(); ?>c/benches" class="st2-submenu-item-link">Benches</a>
-                                        </li>
-                                        <li class="st2-submenu-item-li">
-                                          <a href="<?= base_url(); ?>c/parasol" class="st2-submenu-item-link">Parasol</a>
-                                        </li>
-                                      </ul>
+                                  <div class="col-md-3">
+                                    <div class="st2-submenu-list-item">
+                                      <div class="submenu-custom">
+                                        <ul class="st2-submenu-item-ul">
+                                          <li class="st2-submenu-item-li">
+                                            <a href="<?= base_url(); ?>c/chairs" class="st2-submenu-item-link">Chairs</a>
+                                          </li>
+                                          <li class="st2-submenu-item-li">
+                                            <a href="<?= base_url(); ?>c/loungers-and-sunbed" class="st2-submenu-item-link">Loungers and Sunbed</a>
+                                          </li>
+                                          <li class="st2-submenu-item-li">
+                                            <a href="<?= base_url(); ?>c/benches" class="st2-submenu-item-link">Benches</a>
+                                          </li>
+                                          <li class="st2-submenu-item-li">
+                                            <a href="<?= base_url(); ?>c/parasol" class="st2-submenu-item-link">Parasol</a>
+                                          </li>
+                                        </ul>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        </section>
-                      </div>
-                      <!-- end submenu home -->
-                    </li>
+                          </section>
+                        </div>
+                        <!-- end submenu home -->
+                      </li>
+                    <?php } else { ?>
+                      <li class="st2-li-primary">
+                        <a class="st2-item-link" href="<?= base_url(); ?>">Products Collections</a>
+                      </li>
+                    <?php } ?>
                     <li class="st2-li-primary"><a class="st2-item-link" href="<?= base_url(); ?>contact">How to buy</a></li>
-                    <li class="st2-li-primary"><a class="st2-item-link" href="<?= base_url(); ?>products">Shop</a></li>
+                    <?php if ($this->session->userdata('login')) { ?>
+                      <li class="st2-li-primary"><a class="st2-item-link" href="<?= base_url(); ?>products">Shop</a></li>
+                    <?php } else { ?>
+                      <li class="st2-li-primary"><a class="st2-item-link" href="<?= base_url(); ?>login">Shop</a></li>
+                    <?php } ?>
                     <li class="st2-li-primary"><a class="st2-item-link" href="<?= base_url(); ?>about">About</a></li>
                   </ul>
                 </nav>
@@ -218,11 +228,13 @@ $settingss = $this->db->get('settings')->row_array();
                   </div>
                 </div>
                 <!-- mega menu -->
-                <div class="st2-megamenu-block st2-control-block js-click-megamenu">
-                  <div class="st2-megamenu-icon">
-                    <span class="lnr lnr-menu"></span>
+                <?php if ($this->session->userdata('login')) { ?>
+                  <div class="st2-megamenu-block st2-control-block js-click-megamenu">
+                    <div class="st2-megamenu-icon">
+                      <span class="lnr lnr-menu"></span>
+                    </div>
                   </div>
-                </div>
+                <?php } ?>
               </div>
             </div>
             <!-- Form search -->

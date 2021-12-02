@@ -213,7 +213,7 @@ $settingss = $this->db->get('settings')->row_array();
                     <?php if (!$this->session->userdata('login')) { ?>
                       <a href="<?= base_url(); ?>login" span class="lnr lnr-user" style="color: #222"></a>
                     <?php } else { ?>
-                      <a href="<?= base_url(); ?>profile" span class="lnr lnr-user icon-menu" style="color: #222"></a>
+                      <a href="<?= base_url(); ?>profile" span class="lnr lnr-user" class="icon-menu" style="color: #222"></a>
                     <?php } ?>
                   </div>
                 </div>
@@ -338,10 +338,10 @@ $settingss = $this->db->get('settings')->row_array();
     <div class="menu-clone">
       <ul class="main-menu">
         <li class="menu-item menu-item-has-children">
-          <a href="Homepage01.html">Home</a>
+          <a href="<?= base_url(); ?>">Home</a>
         </li>
         <li class="menu-item menu-item-has-children">
-          <a href="List_ShopPageFullWidth.html">Shop</a>
+          <a href="<?= base_url(); ?>products">Shop</a>
           <span class="toggle-submenu"></span>
           <div class="submenu">
             <div class="col-12 col-md-12 custom-col">
@@ -349,37 +349,39 @@ $settingss = $this->db->get('settings')->row_array();
                 <div class="col-wrapper-item">
                   <h2 class="widget-title">Indoor</h2>
                   <ul class="menu-shop-style">
-                    <li class="style-item"><a class="afont200" href="List_ShopPageFullWidth.html">Sofa & Deep Seating</a></li>
-                    <li class="style-item"><a class="afont200" href="List_Shop_Sidebar-Left.html">Dining Table</a></li>
-                    <li class="style-item"><a class="afont200" href="List_ShopPageFullWidth.html">Sofa & Deep Seating</a></li>
-                    <li class="style-item"><a class="afont200" href="List_Shop_Sidebar-Left.html">Coffee Table</a></li>
-                    <li class="style-item"><a class="afont200" href="List_ShopPageFullWidth.html">Chairs</a></li>
-                    <li class="style-item"><a class="afont200" href="List_Shop_Sidebar-Left.html">Dresser Cabinet</a></li>
-                    <li class="style-item"><a class="afont200" href="List_ShopPageFullWidth.html">Bed & Bedside</a></li>
-                    <li class="style-item"><a class="afont200" href="List_Shop_Sidebar-Left.html">Bookrack</a></li>
-                    <li class="style-item"><a class="afont200" href="List_Shop_Sidebar-Left.html">Entertainment TV Unit</a></li>
+                    <li class="style-item"><a class="afont200" href="<?= base_url(); ?>c/sofa-and-deep-seating">Sofa & Deep Seating</a></li>
+                    <li class="style-item"><a class="afont200" href="<?= base_url(); ?>c/dining-table">Dining Table</a></li>
+                    <li class="style-item"><a class="afont200" href="<?= base_url(); ?>c/coofe-table">Coffee Table</a></li>
+                    <li class="style-item"><a class="afont200" href="<?= base_url(); ?>c/chairs">Chairs</a></li>
+                    <li class="style-item"><a class="afont200" href="<?= base_url(); ?>c/dresser-cabinet">Dresser Cabinet</a></li>
+                    <li class="style-item"><a class="afont200" href="<?= base_url(); ?>c/bed-and-bedside">Bed & Bedside</a></li>
+                    <li class="style-item"><a class="afont200" href="<?= base_url(); ?>c/bookrack">Bookrack</a></li>
+                    <li class="style-item"><a class="afont200" href="<?= base_url(); ?>c/entertainment-tv-unit">Entertainment TV Unit</a></li>
                   </ul>
                 </div>
                 <div class="col-wrapper-item">
                   <h2 class="widget-title">Outdoor</h2>
                   <ul class="menu-shop-style">
-                    <li class="style-item"><a class="afont200" href="List_ShopPageFullWidth.html">Sofa & Deep Seating</a></li>
-                    <li class="style-item"><a class="afont200" href="List_Shop_Sidebar-Left.html">Dining Table</a></li>
-                    <li class="style-item"><a class="afont200" href="List_ShopPageFullWidth.html">Bar Table</a></li>
-                    <li class="style-item"><a class="afont200" href="List_Shop_Sidebar-Left.html">Bar Chair</a></li>
-                    <li class="style-item"><a class="afont200" href="List_ShopPageFullWidth.html">Chairs</a></li>
-                    <li class="style-item"><a class="afont200" href="List_Shop_Sidebar-Left.html">Loungers and Sunbed</a></li>
-                    <li class="style-item"><a class="afont200" href="List_ShopPageFullWidth.html">Benches</a></li>
-                    <li class="style-item"><a class="afont200" href="List_Shop_Sidebar-Left.html">Parasol</a></li>
+                    <li class="style-item"><a class="afont200" href="<?= base_url(); ?>c/sofa-and-deep-seating">Sofa & Deep Seating</a></li>
+                    <li class="style-item"><a class="afont200" href="<?= base_url(); ?>c/dining-table">Dining Table</a></li>
+                    <li class="style-item"><a class="afont200" href="<?= base_url(); ?>c/bar-table">Bar Table</a></li>
+                    <li class="style-item"><a class="afont200" href="<?= base_url(); ?>c/bar-chair">Bar Chair</a></li>
+                    <li class="style-item"><a class="afont200" href="<?= base_url(); ?>c/loungers-and-sunbed">Loungers and Sunbed</a></li>
+                    <li class="style-item"><a class="afont200" href="<?= base_url(); ?>c/benches">Benches</a></li>
+                    <li class="style-item"><a class="afont200" href="<?= base_url(); ?>c/parsol">Parasol</a></li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
         </li>
-        <li class="menu-item menu-item-has-children"><a href="">How to buy</a></li>
-        <li class="menu-item menu-item-has-children"><a href="">About</a></li>
-        <li class="menu-item menu-item-has-children"><a href="">My Acount</a></li>
+        <li class="menu-item menu-item-has-children"><a href="<?= base_url(); ?>contact">How to buy</a></li>
+        <li class="menu-item menu-item-has-children"><a href="<?= base_url(); ?>about">About</a></li>
+        <?php if (!$this->session->userdata('login')) { ?>
+          <li class="menu-item menu-item-has-children"><a href="<?= base_url(); ?>login">My Acount</a></li>
+        <?php } else { ?>
+          <li class="menu-item menu-item-has-children"><a href="<?= base_url(); ?>profile">My Acount</a></li>
+        <?php } ?>
       </ul>
     </div>
   </div>

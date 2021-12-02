@@ -18,6 +18,9 @@
 		padding: 0 10px;
 		font-size: 14px;
 	}
+	.lnr-menu:before {
+		content: "\e871";
+	}
 }
 
 @media (max-width: 1280px) {

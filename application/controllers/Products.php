@@ -84,7 +84,7 @@ class Products extends CI_Controller
 			$this->Products_model->updateViewer($slug);
 			$data['title'] = $getProduct['title'] . ' - ' . $this->Settings_model->general()["app_name"];
 			$data['css'] = 'detail';
-			$data['responsive'] = '';
+			$data['responsive'] = 'product-responsive';
 			$data['product'] = $getProduct;
 			$data['img'] = $this->Products_model->getImgProductBySlug($slug);
 			$data['cart'] = $this->order_model->getCartUser();

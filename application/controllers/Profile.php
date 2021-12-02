@@ -45,8 +45,8 @@ class Profile extends CI_Controller
         $data['title'] = 'Transaksi - ' . $this->Settings_model->general()["app_name"];
         $data['css'] = 'profile';
         $data['transaction'] = $this->User_model->getOrder();
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/navbar');
+        $this->load->view('templates/header_nature', $data);
+        $this->load->view('templates/navbar_nature');
         $this->load->view('profile/order', $data);
         $this->load->view('templates/footerv2');
     }
@@ -60,8 +60,8 @@ class Profile extends CI_Controller
         $data['title'] = 'Detail Pesanan - ' . $this->Settings_model->general()["app_name"];
         $data['css'] = 'profile';
         $data['product_order'] = $this->User_model->getProductByInvoice($id);
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/navbar');
+        $this->load->view('templates/header_nature', $data);
+        $this->load->view('templates/navbar_nature');
         $this->load->view('profile/detail_order', $data);
         $this->load->view('templates/footerv2');
     }
@@ -88,8 +88,8 @@ class Profile extends CI_Controller
         $data['title'] = 'Riwayat Transaksi - ' . $this->Settings_model->general()["app_name"];
         $data['css'] = 'profile';
         $data['finish'] = $this->User_model->getFinishOrder();
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/navbar');
+        $this->load->view('templates/header_nature', $data);
+        $this->load->view('templates/navbar_nature');
         $this->load->view('profile/histories', $data);
         $this->load->view('templates/footerv2');
     }
@@ -103,8 +103,8 @@ class Profile extends CI_Controller
             $data['title'] = 'Edit Profil - ' . $this->Settings_model->general()["app_name"];
             $data['css'] = 'profile';
             $data['user'] = $this->User_model->getProfile();
-            $this->load->view('templates/header', $data);
-            $this->load->view('templates/navbar');
+            $this->load->view('templates/header_nature', $data);
+            $this->load->view('templates/navbar_nature');
             $this->load->view('profile/edit_profile', $data);
             $this->load->view('templates/footerv2');
         } else {
@@ -153,8 +153,8 @@ class Profile extends CI_Controller
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Ganti Kata Sandi - ' . $this->Settings_model->general()["app_name"];
             $data['css'] = 'profile';
-            $this->load->view('templates/header', $data);
-            $this->load->view('templates/navbar');
+            $this->load->view('templates/header_nature', $data);
+            $this->load->view('templates/navbar_nature');
             $this->load->view('profile/change_password', $data);
             $this->load->view('templates/footerv2');
         } else {

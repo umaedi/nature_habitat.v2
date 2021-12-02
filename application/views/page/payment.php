@@ -19,7 +19,7 @@
                                 <?php } else { ?>
                                     <td><?= $item['ket']; ?></td>
                                 <?php } ?>
-                                <td>Rp<?= number_format($item['price'] * $item['qty'], 0, ",", "."); ?></td>
+                                <td>$<?= number_format($item['price'] * $item['qty'], 0, ",", "."); ?></td>
                             </tr>
                         <?php endforeach; ?>
                     </table>
@@ -127,7 +127,7 @@
             <hr>
             <div class="list">
                 <p>Total Shopping</p>
-                <p>Rp<?= number_format($totalall, 0, ",", "."); ?></p>
+                <p>$<?= number_format($totalall, 0, ",", "."); ?></p>
             </div>
             <div class="list">
                 <p>Shipping costs</p>

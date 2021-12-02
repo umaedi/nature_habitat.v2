@@ -1,4 +1,8 @@
 <div class="container">
+  <div class="row">
+    <div class="col">
+    </div>
+  </div>
   <a href="<?= base_url(); ?>">
     <h2 class="brand-name"><?= $this->Settings_model->general()["app_name"]; ?></h2>
   </a>

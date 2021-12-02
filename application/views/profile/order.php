@@ -16,7 +16,7 @@
                     <tr>
                         <td><?= $d['invoice_code']; ?></td>
                         <td><?= $d['date_input']; ?></td>
-                        <td>Rp<?= number_format($d['total_all'], 0, ",", "."); ?></td>
+                        <td>$<?= number_format($d['total_all'], 0, ",", "."); ?></td>
                         <?php if ($d['courier'] == "cod") { ?>
                             <td>Cash of Delivery</td>
                         <?php } else { ?>

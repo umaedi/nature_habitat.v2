@@ -10,7 +10,7 @@
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		right: -21px;
+		right: 3px;
 		color: #fff;
 	}
 }
@@ -42,17 +42,17 @@
 
 @media screen and (max-width: 1250px) {
 	.icon-menu {
-		margin: 34px;
+		margin: 30px;
 		color: #fff;
 	}
 	.lnr-user:before {
 		content: "\e82a";
 		color: #fff;
-		margin: 34px;
+		margin: 29px;
 	}
 	.lnr-menu:before {
 		content: "\e871";
-		margin: 34px;
+		margin: 30px;
 	}
 }
 

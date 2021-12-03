@@ -7,6 +7,7 @@
     <h2 class="brand-name"><?= $this->Settings_model->general()["app_name"]; ?></h2>
   </a>
   <p class="subtitle">For more update design, price & product inquiries, special order, hotel & restaurant furniture project and other inquiries please provide us your contact & business details so we can un derstand you better.</p>
+  <?php echo $this->session->flashdata('failed'); ?>
   <div class="form-outer">
     <form action="" <?= base_url(); ?>register" method="post">
       <div class="page slide-page">
@@ -29,13 +30,13 @@
             </div>
             <div class="field">
               <div class="label">Contact Person</div>
-              <input type="text" name="contact">
+              <input type="number" name="contact">
             </div>
           </div>
           <div class="col-lg-6">
             <div class="field">
               <div class="label">Phone No*</div>
-              <input type="text" name="phone">
+              <input type="number" name="phone">
             </div>
             <div class="field">
               <div class="label">WhatsApp No</div>
@@ -250,12 +251,12 @@
     <div class="modal-dialog modal-dialog-centered" role="document" style="width: 400px">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalCenterTitle">Registrasi Berhasil</h5>
+          <h5 class="modal-title" id="exampleModalCenterTitle">Registration Successful</h5>
         </div>
         <div class="modal-body">
           <p class="text-center h1"><i class="fa text-dark fa-envelope-open-text"></i></p>
           <p class="text-muted">We have sent an account verification email to your email. Please check your inbox or spam.</p>
-          <a href="<?= base_url(); ?>login" class="btn btn-block btn-dark">Go to login page</a>
+          <a href="<?= base_url(); ?>login" class="btn btn-block bg-login">Go to login page</a>
         </div>
       </div>
     </div>

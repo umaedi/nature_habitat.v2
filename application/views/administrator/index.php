@@ -19,7 +19,7 @@
               <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $data; ?></div>
             </div>
             <div class="col-auto">
-              <i class="fas fa-calendar fa-2x text-gray-300"></i>
+              <i class="fas fa-fw fa-users fa-2x text-gray-300"></i>
             </div>
           </div>
         </div>
@@ -36,7 +36,7 @@
               <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $data; ?></div>
             </div>
             <div class="col-auto">
-              <i class="fas fa-calendar fa-2x text-gray-300"></i>
+              <i class="fas fa-fw fa-shopping-cart fa-2x text-gray-300"></i>
             </div>
           </div>
         </div>
@@ -53,7 +53,7 @@
               <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $data - 1 ?></div>
             </div>
             <div class="col-auto">
-              <i class="fas fa-calendar fa-2x text-gray-300"></i>
+              <i class="fas fa-fw fa-envelope fa-2x text-gray-300"></i>
             </div>
           </div>
         </div>
@@ -70,7 +70,7 @@
               <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $data; ?></div>
             </div>
             <div class="col-auto">
-              <i class="fas fa-calendar fa-2x text-gray-300"></i>
+              <i class="fas fa-paper-plane fa-2x text-gray-300"></i>
             </div>
           </div>
         </div>
@@ -87,7 +87,7 @@
               <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $data; ?></div>
             </div>
             <div class="col-auto">
-              <i class="fas fa-calendar fa-2x text-gray-300"></i>
+              <i class="fas fa-fw fa-tag fa-2x text-gray-300"></i>
             </div>
           </div>
         </div>
@@ -104,7 +104,7 @@
               <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $data; ?></div>
             </div>
             <div class="col-auto">
-              <i class="fas fa-calendar fa-2x text-gray-300"></i>
+              <i class="fas fa-fw fa-box-open fa-2x text-gray-300"></i>
             </div>
           </div>
         </div>
@@ -121,7 +121,7 @@
               <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $data; ?></div>
             </div>
             <div class="col-auto">
-              <i class="fas fa-calendar fa-2x text-gray-300"></i>
+              <i class="fas fa-fw fa-fire fa-2x text-gray-300"></i>
             </div>
           </div>
         </div>
@@ -138,7 +138,7 @@
               <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $data; ?></div>
             </div>
             <div class="col-auto">
-              <i class="fas fa-calendar fa-2x text-gray-300"></i>
+              <i class="fas fa-fw fa-comments fa-2x text-gray-300"></i>
             </div>
           </div>
         </div>

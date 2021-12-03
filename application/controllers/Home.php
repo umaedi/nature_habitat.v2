@@ -28,8 +28,8 @@ class Home extends CI_Controller
 		$data['getPromo'] = $this->Promo_model->getPromoLimit();
 		$data['recent'] = $this->Products_model->getProductsLimit();
 		$data['best'] = $this->Products_model->getBestProductsLimit();
-		$data['kategoriIndoor'] = $this->db->limit(6)->get_where('products', array('category' => 10));
-		$data['kategoriOutdoor'] = $this->db->limit(6)->get_where('products', array('category' => 11));
+		$data['kategoriIndoor'] = $this->db->limit(4)->get_where('products', array('category' => 10));
+		$data['kategoriOutdoor'] = $this->db->limit(4)->get_where('products', array('category' => 11));
 		$data['allProducts'] = $this->db->get('products');
 		$data['cart'] = $this->order_model->getCartUser();
 		$this->verify_web_authentication();

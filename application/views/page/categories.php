@@ -50,7 +50,7 @@
                     </form>
                     <hr>
                     <p class="title">
-                        Penawaran
+                        Offer
                     </p>
                     <a href="<?= base_url(); ?>c/<?= $slug ?>?promo=true">Promo</a>
                     <hr>
@@ -60,7 +60,7 @@
                     <a href="<?= base_url(); ?>c/<?= $slug ?>?condition=1">New</a>
                     <a href="<?= base_url(); ?>c/<?= $slug ?>?condition=2">Second</a>
                     <hr>
-                    <a href="<?= base_url(); ?>c/<?= $slug ?>" class="btn btn-danger text-light btn-sm">Reset Filter</a>
+                    <a href="<?= base_url(); ?>c/<?= $slug ?>" class="btn btn-dark text-light btn-sm">Reset Filter</a>
                 </div>
             </div>
         </div>

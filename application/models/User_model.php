@@ -237,13 +237,13 @@ class User_model extends CI_Model
             $this->email->initialize($config);
             $this->email->from($this->Settings_model->general()["account_gmail"], $this->Settings_model->general()["app_name"]);
             $this->email->to($email);
-            $this->email->subject('Verifikasi Alamat Email ' . $this->Settings_model->general()["app_name"]);
+            $this->email->subject('Email Address Verification ' . $this->Settings_model->general()["app_name"]);
             $this->email->message(
                 '<p><strong>Halo ' . $name . '</strong><br>
-                Terima kasih telah mendaftar di ' . $this->Settings_model->general()["app_name"] . '. <br/>
-                Silakan verifikasi email dengan klik link dibawah ini: <br/>
+                Thank you for registering on ' . $this->Settings_model->general()["app_name"] . '. <br/>
+                Please verify your email by clicking the link below: <br/>
                 <a href="' . base_url() . 'auth/verification?email=' . $email . '&token=' . $token . '">' . base_url() . 'auth/verification?email=' . $email . '&token=' . $token . '</a><br/>
-                Terima kasih</p>
+                Best Regards</p>
                 '
             );
             $this->email->send();

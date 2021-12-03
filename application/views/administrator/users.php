@@ -40,7 +40,7 @@
 									<?php } else { ?>
 										<td>Aktif <a href="<?= base_url(); ?>administrator/nonactive_user/<?= $data['id']; ?>">nonaktifkan</a></td>
 									<?php } ?>
-									<td><a href="<?= base_url(); ?>administrator/user_detail/<?= $data['id']; ?>">Detail</a></td>
+									<td><a href="<?= base_url(); ?>administrator/user_detail/<?= $data['id']; ?>" class="btn btn-sm btn-success"><i class="fa fa-sm fa-eye"></a></td>
 								</tr>
 								<?php $no++; ?>
 							<?php endforeach; ?>

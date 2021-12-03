@@ -4,7 +4,6 @@
         <h2 class="brand-name"><?= $this->Settings_model->general()["app_name"]; ?></h2>
     </a>
     <p class="subtitle">Please login to the account now</p>
-
     <div class="row justify-content-center">
         <div class="col-md-6">
             <?php echo $this->session->flashdata('failed'); ?>

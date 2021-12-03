@@ -101,7 +101,7 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="exampleFormControlTextarea1">For any inquires please fill the form below, we will contact you as soon as we can</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"><?= $user['detail_other']; ?></textarea>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"><?= $user['help']; ?></textarea>
                                 </div>
                             </div>
                         </div>

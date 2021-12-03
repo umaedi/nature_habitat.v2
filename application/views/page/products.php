@@ -1,9 +1,9 @@
 <div class="wrapper">
     <div class="title-head">
         <?php if ($titleHead == "") { ?>
-            <h2 class="title">Semua Produk</h2>
+            <h2 class="title">All Products</h2>
         <?php } else { ?>
-            <h2 class="title">Semua Produk > <?= $titleHead ?></h2>
+            <h2 class="title">All Products > <?= $titleHead ?></h2>
         <?php } ?>
     </div>
     <div class="dropdown filter-for-mobile">
@@ -21,7 +21,7 @@
             <a href="<?= base_url(); ?>products?promo=true" class="dropdown-item">Promo</a>
             <a href="<?= base_url(); ?>products?condition=1" class="dropdown-item">New</a>
             <a href="<?= base_url(); ?>products?condition=2" class="dropdown-item">Second</a>
-            <a href="<?= base_url(); ?>products" class="btn dropdown-item btn-danger text-danger">Reset Filter</a>
+            <a href="<?= base_url(); ?>products" class="btn dropdown-item btn-dark text-light">Reset Filter</a>
         </div>
     </div>
     <div class="core">

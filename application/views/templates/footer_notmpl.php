@@ -6,6 +6,7 @@
     //loading screen
     $(window).ready(function() {
         $(".fakeLoader").fadeOut("slow");
+        $('#modalRegisterSuccess').modal('show');
     })
 </script>
 </body>

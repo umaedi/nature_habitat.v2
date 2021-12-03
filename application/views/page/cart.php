@@ -2,63 +2,55 @@
     <div class="navigation">
         <a href="<?= base_url(); ?>">Home</a>
         <i class="fa fa-caret-right"></i>
-        <a>Cart</a>
+        <a>Troli</a>
     </div>
     <div class="core mt-4">
         <div class="product">
-            <?php if ($cart->num_rows() > 0) { ?>
-                <?php foreach ($cart->result_array() as $item) : ?>
+            <?php if ($this->cart->total_items() > 0) { ?>
+                <?php foreach ($this->cart->contents() as $item) : ?>
                     <div class="item">
                         <div class="item-main">
-                            <img src="<?= base_url(); ?>assets/images/product/<?= $item['img']; ?>" alt="<?= $item['product_name']; ?>">
+                            <img src="<?= base_url(); ?>assets/images/product/<?= $item['img']; ?>" alt="">
                             <a href="<?= base_url(); ?>p/<?= $item['slug']; ?>">
-                                <h2 class="title mb-0"><?= $item['product_name']; ?></h2>
+                                <h2 class="title mb-0"><?= $item['name']; ?></h2>
                             </a>
-                            <small class="text-muted">Amount: <?= $item['qty']; ?></small>
-                            <h3 class="price mt-0 mb-0">$<?= number_format($item['price'] * $item['qty'], 0, ",", "."); ?></h3>
+                            <small class="text-muted">Jumlah: <?= $item['qty']; ?></small>
+                            <h3 class="price mt-0 mb-0">Rp <?= number_format($item['subtotal'], 0, ",", "."); ?></h3>
                             <?php if ($item['ket'] == '') { ?>
-                                <small class="desc_product_<?= $item['id']; ?>"><a href="#" class="text-dark" data-toggle="modal" data-target="#modalAddDescription" onclick="showModalAddKet('<?= $item['id']; ?>')">Add description</a></small>
+                                <small class="desc_product_<?= $item['rowid']; ?>"><a href="#" class="text-dark" data-toggle="modal" data-target="#modalAddDescription" onclick="showModalAddKet('<?= $item['rowid']; ?>')">Tambah keterangan</a></small>
                             <?php } else { ?>
-                                <small class="desc_product_<?= $item['id']; ?>">Ket: <?= $item['ket']; ?> <a href="#" class="text-dark" data-toggle="modal" data-target="#modalEditDescription" onclick="showModalEditKet('<?= $item['id']; ?>')"><i class="fa text-info fa-edit"></i></a></small>
+                                <small class="desc_product_<?= $item['rowid']; ?>">Ket: <?= $item['ket']; ?> <a href="#" class="text-dark" data-toggle="modal" data-target="#modalEditDescription" onclick="showModalEditKet('<?= $item['rowid']; ?>')"><i class="fa text-info fa-edit"></i></a></small>
                             <?php } ?>
                             <div class="clearfix"></div>
                         </div>
-                        <a href="<?= base_url(); ?>cart/delete/<?= $item['id']; ?>" onclick="return confirm('Are you sure you want to remove this product from the cart?')"><i class="fa fa-trash"></i></a>
+                        <a href="<?= base_url(); ?>cart/delete/<?= $item['rowid']; ?>" onclick="return confirm('Yakin ingin menghapus produk ini dari troli?')"><i class="fa fa-trash"></i></a>
                     </div>
                     <hr>
                 <?php endforeach; ?>
-                <a href="<?= base_url(); ?>cart/delete_cart" onclick="return confirm('Are you sure you want to empty the Cart?')"><button class="btn btn-outline-dark">Empty Cart</button></a>
+                <a href="<?= base_url(); ?>cart/delete_cart" onclick="return confirm('Apakah Anda yakin akan mengosongkan Troli?')"><button class="btn btn-outline-dark">Kosongkan Troli</button></a>
             <?php } else { ?>
-                <div class="alert alert-warning">Oops. Cart is still empty. Let's go shopping first..</div>
+                <div class="alert alert-warning">Upss. Troli masih kosong. Yuk belanja terlebih dahulu..</div>
                 <br><br><br>
             <?php } ?>
         </div>
-        <?php
-        $totalall = 0;
-        $totalitem = 0;
-        foreach ($cart->result_array() as $c) {
-            $totalall += intval($c['price']) * intval($c['qty']);
-            $totalitem += intval($c['qty']);
-        }
-        ?>
         <div class="total shadow">
-            <h2 class="title">Shopping Summary</h2>
+            <h2 class="title">Ringkasan Belanja</h2>
             <hr>
             <div class="list">
-                <p>Total Number of Items</p>
-                <p><?= $totalitem; ?></p>
+                <p>Total Jumlah Barang</p>
+                <p><?= $this->cart->total_items(); ?></p>
             </div>
             <div class="list">
-                <p>Total Item Price</p>
-                <p>$<?= number_format($totalall, 0, ",", "."); ?></p>
+                <p>Total Harga Barang</p>
+                <p>Rp <?= number_format($this->cart->total(), 0, ",", "."); ?></p>
             </div>
-            <?php if ($cart->num_rows() > 0) { ?>
+            <?php if ($this->cart->total_items() > 0) { ?>
                 <a href="<?= base_url(); ?>payment">
-                    <button class="btn btn-pembayaran btn btn-block mt-2">Continue to Payment</button>
+                    <button class="btn btn-dark btn btn-block mt-2">Lanjut ke Pembayaran</button>
                 </a>
             <?php } else { ?>
                 <a href="<?= base_url(); ?>">
-                    <button class="btn btn-pembayaran btn btn-block mt-2">Shop First</button>
+                    <button class="btn btn-dark btn btn-block mt-2">Belanja Dulu</button>
                 </a>
             <?php } ?>
         </div>
@@ -71,7 +63,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalCenterTitle">Add Description</h5>
+                <h5 class="modal-title" id="exampleModalCenterTitle">Tambah Deskripsi</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -80,7 +72,7 @@
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id="btnEditKetProduct" data-dismiss="modal">Save</button>
+                <button type="button" class="btn btn-primary" id="btnEditKetProduct" data-dismiss="modal">Simpan</button>
             </div>
         </div>
     </div>
@@ -91,7 +83,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalCenterTitle">Add Description</h5>
+                <h5 class="modal-title" id="exampleModalCenterTitle">Tambah Deskripsi</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -100,7 +92,7 @@
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id="btnSaveKetProduct" data-dismiss="modal">Save</button>
+                <button type="button" class="btn btn-primary" id="btnSaveKetProduct" data-dismiss="modal">Simpan</button>
             </div>
         </div>
     </div>
@@ -122,7 +114,7 @@
             type: "post",
             dataType: "json",
             data: {
-                id: id
+                rowid: id
             },
             success: function(res) {
                 $("#bodyModalEditKet").html(`<div class="form-group">

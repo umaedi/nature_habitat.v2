@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,7 +40,7 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Login Admin!</h1>
                   </div>
-                  <?php echo $this->session->flashdata('failed'); ?> 
+                  <?php echo $this->session->flashdata('failed'); ?>
                   <form class="user" action="<?= base_url(); ?>login/admin" method="post">
                     <div class="form-group">
                       <label for="username">Username</label>

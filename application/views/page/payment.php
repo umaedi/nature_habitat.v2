@@ -1,6 +1,12 @@
 <form action="<?= base_url(); ?>payment/succesfully" method="post">
     <div class="wrapper">
         <div class="core">
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Howo to buy ?</strong> Please Contact us for more Information. <a href="https://wa.me/62816850103?text=Hallo%20I%20need%20information%20for%20purchasing%20products%20at%20Nature%20Habitat">Click Here</a>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
             <?php if ($cart->num_rows() > 0) { ?>
                 <div class="products">
                     <table class="table">
@@ -32,13 +38,13 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="label">Address As</label>
-                                <input type="text" id="label" autocomplete="off" class="form-control" placeholder="Example: Home, Office, Boarding House, etc" required name="label">
+                                <input type="text" id="label" autocomplete="off" class="form-control" placeholder="Example: Home, Office, Boarding House, etc" required name="label" readonly>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="name">Recipient's name</label>
-                                <input type="text" id="name" autocomplete="off" class="form-control" required name="name">
+                                <input type="text" id="name" autocomplete="off" class="form-control" required name="name" readonly>
                             </div>
                         </div>
                     </div>
@@ -46,14 +52,14 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="telp">Phone number</label>
-                                <input type="number" id="telp" autocomplete="off" class="form-control" required name="telp">
+                                <input type="number" id="telp" autocomplete="off" class="form-control" required name="telp" readonly>
                                 <small class="text-muted">Example: 081234567890</small>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="zipcode">Postal code</label>
-                                <input type="number" id="zipcode" autocomplete="off" class="form-control" required name="zipcode">
+                                <input type="number" id="zipcode" autocomplete="off" class="form-control" required name="zipcode" readonly>
                             </div>
                         </div>
                     </div>
@@ -61,7 +67,7 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="paymentSelectProvinces">Province</label>
-                                <select name="paymentSelectProvinces" id="paymentSelectProvinces" class="form-control" required>
+                                <select name="paymentSelectProvinces" id="paymentSelectProvinces" class="form-control" required readonly>
                                     <option></option>
                                     <?php foreach ($provinces as $p) : ?>
                                         <option value="<?= $p['province_id']; ?>"><?= $p['province']; ?></option>
@@ -72,7 +78,7 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="paymentSelectRegencies">County/City</label>
-                                <select name="paymentSelectRegencies" id="paymentSelectRegencies" class="form-control" required>
+                                <select name="paymentSelectRegencies" id="paymentSelectRegencies" class="form-control" required readonly>
                                     <option></option>
                                 </select>
                             </div>
@@ -82,20 +88,20 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="district">Districts</label>
-                                <input type="text" class="form-control" autocomplete="off" id="district" name="district" required>
+                                <input type="text" class="form-control" autocomplete="off" id="district" name="district" required readonly>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="village">Village/Village</label>
-                                <input type="text" class="form-control" autocomplete="off" id="village" name="village" required>
+                                <input type="text" class="form-control" autocomplete="off" id="village" name="village" required readonly>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
                             <label for="address">Address</label>
-                            <textarea name="address" id="address" class="form-control" placeholder="Fill in the street name, house number, building name, etc." required></textarea>
+                            <textarea name="address" id="address" class="form-control" placeholder="Fill in the street name, house number, building name, etc." required readonly></textarea>
                         </div>
                     </div>
                 </div>
@@ -104,7 +110,7 @@
                     <h2 class="title">Shipping Method</h2>
                     <small class="text-danger" id="paymentTextNotSupportDelivery" style="display: none;">The delivery method is not yet available for your place.</small>
                     <div class="form-group mt-3" id="groupPaymentSelectKurir">
-                        <select name="paymentSelectKurir" id="paymentSelectKurir" class="form-control" required>
+                        <select name="paymentSelectKurir" id="paymentSelectKurir" class="form-control" required readonly>
                             <option></option>
                         </select>
                     </div>
@@ -156,7 +162,7 @@
                 <small class="text-success mt-1" id="msgSuccessCouponCheckout" style="display: none;">Coupon successfully used</small>
             </div>
             <?php if ($cart->num_rows() > 0) { ?>
-                <button class="btn btn-bayar btn btn-block mt-2" id="btnPaymentNow" type="submit">Pay Now</button>
+                <a href="#" class="btn btn-bayar btn btn-block mt-2" id="btnPaymentNow" type="submit">Pay Now</a>
             <?php } else { ?>
                 <div class="alert mt-2 alert-warning">Your basket is still empty.</div>
                 <a href="<?= base_url(); ?>">

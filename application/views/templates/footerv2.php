@@ -114,6 +114,14 @@ if ($this->session->userdata('login')) {
         slidesToScroll: 1
     });
 
+    $('#btnPaymentNow').on('click', function() {
+        swal({
+            icon: 'info',
+            title: 'How to buy',
+            text: 'Please Contact us for more Information',
+        });
+    });
+
     $("i.icon-search-navbar").on('click', function() {
         $("div.search-form").slideDown('fast');
         $("div.search-form input").focus();

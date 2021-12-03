@@ -171,7 +171,7 @@ $settingss = $this->db->get('settings')->row_array();
                       </li>
                     <?php } else { ?>
                       <li class="st2-li-primary">
-                        <a class="st2-item-link" href="<?= base_url(); ?>">Products Collections</a>
+                        <a class="st2-item-link" href="<?= base_url(); ?>login">Products Collections</a>
                       </li>
                     <?php } ?>
                     <li class="st2-li-primary"><a class="st2-item-link" href="<?= base_url(); ?>contact">How to buy</a></li>
